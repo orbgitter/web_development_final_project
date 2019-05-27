@@ -12,20 +12,183 @@ nav, aside, section,article, header,footer, main{
     display: block;
 }
 
+.isActiveDespositorToggle .toggle-on {
+    background: green !important;
+}
 
-/*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- */
+/* #generatorHashcode #bla {
+    background-image:url("../includes/refreshPasswordIcon.png");
+    background-repeat: no-repeat;
+
+
+} */
 
  body {
    margin: 0;
    padding: 0;
    direction: ltr;
  }
+
+/*-------------------------------------------------*/
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.box {
+    display: block;
+    min-width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    overflow: hidden;
+}
+  
+.upload-options {
+    position: relative;
+    height: 75px;
+    background-color: red;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    transition: background-color ease-in-out 150ms;
+}
+    
+.upload-options:hover {
+   background-color: lighten(red, 10%);
+}
+
+.upload-options input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.upload-options label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.upload-options::after {
+    content: 'add'; 
+    font-family: 'Material Icons';
+    position: absolute;
+    font-size: 2.5rem;
+    color: rgba(230, 230, 230, 1);
+    top: calc(50% - 2.5rem);
+    left: calc(50% - 1.25rem);
+    z-index: 0;
+}
+
+.upload-options span {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.upload-options:hover i.material-icons {
+    color: lightgray;        
+}
+  
+.js--image-preview {
+    height: 225px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url('');
+    background-color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.js--image-preview::after {
+      content: "photo_size_select_actual"; 
+      font-family: 'Material Icons';
+      position: relative;
+      font-size: 4.5em;
+      color: rgba(230, 230, 230, 1);
+      top: calc(50% - 3rem);
+      left: calc(50% - 2.25rem);
+      z-index: 0;
+}
+
+.js--image-preview.js--no-default::after {
+    display: none;
+}
+.js--image-preview:nth-child(2) {
+      background-image: url('https://gwiguyana.gy/sites/default/files/default_images/placeholder.png');
+}
+
+i.material-icons {
+    transition: color 100ms ease-in-out;
+    font-size: 2.25em;
+    line-height: 55px;
+    color: white;
+    display: block;
+}
+  
+.drop {
+    display: block;
+    position: absolute;
+    background: transparentize(red, .8);
+    border-radius: 100%;
+    transform:scale(0);
+}
+  
+.animate {
+    animation: ripple 0.4s linear;
+}
+  
+  @keyframes ripple {
+      100% {opacity: 0; transform: scale(2.5);}
+  }
+/*--------------------------------------------------*/
+
+ @media (min-width:851px) {
+    .mainActionBtn {
+        /* float:left; */
+        /* width: 45%; */
+        margin-top:5%;
+        /* margin-left:4%; */
+        /* height: 525%; */
+        height: 300%;
+        font-size: 200%;
+    }
+ }
+
+ @media (min-width:591px) and (max-width:850px) {
+    .mainActionBtn {
+        /* float:left; */
+        /* width: 100%; */
+        margin-top:5%;
+        /* height: 225%; */
+    }
+}
+
+@media (max-width:590px) {
+.mainActionBtn {
+    /* float:left; */
+    /* clear:both; */
+    /* top:10px; */
+    /* width: 100%; */
+    margin-top:5%;
+    /* height: 125%; */
+    }
+    }
