@@ -16,12 +16,17 @@ nav, aside, section,article, header,footer, main{
     background: green !important;
 }
 
-/* #generatorHashcode #bla {
-    background-image:url("../includes/refreshPasswordIcon.png");
-    background-repeat: no-repeat;
-
-
-} */
+#userPic {
+    background: url("../images/gantz.png") no-repeat;   
+    border-radius:20000000000000000%;
+    width: 100px;
+    height: 90px;
+    text-decoration: none;
+    margin-top: 0%;
+    margin-bottom: 10px;
+    padding-right: 0%;
+    float:left;
+}
 
  body {
    margin: 0;
@@ -29,147 +34,49 @@ nav, aside, section,article, header,footer, main{
    direction: ltr;
  }
 
-/*-------------------------------------------------*/
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
 
-.box {
-    display: block;
-    min-width: 300px;
-    height: 300px;
-    margin: 10px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    overflow: hidden;
-}
-  
-.upload-options {
-    position: relative;
-    height: 75px;
-    background-color: red;
-    cursor: pointer;
-    overflow: hidden;
-    text-align: center;
-    transition: background-color ease-in-out 150ms;
-}
-    
-.upload-options:hover {
-   background-color: lighten(red, 10%);
-}
 
-.upload-options input {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-.upload-options label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-weight: 400;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-    overflow: hidden;
-}
-
-.upload-options::after {
-    content: 'add'; 
-    font-family: 'Material Icons';
-    position: absolute;
-    font-size: 2.5rem;
-    color: rgba(230, 230, 230, 1);
-    top: calc(50% - 2.5rem);
-    left: calc(50% - 1.25rem);
-    z-index: 0;
-}
-
-.upload-options span {
-    display: inline-block;
-    width: 50%;
-    height: 100%;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.upload-options:hover i.material-icons {
-    color: lightgray;        
-}
-  
-.js--image-preview {
-    height: 225px;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background-image: url('');
-    background-color: white;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.js--image-preview::after {
-      content: "photo_size_select_actual"; 
-      font-family: 'Material Icons';
-      position: relative;
-      font-size: 4.5em;
-      color: rgba(230, 230, 230, 1);
-      top: calc(50% - 3rem);
-      left: calc(50% - 2.25rem);
-      z-index: 0;
-}
-
-.js--image-preview.js--no-default::after {
-    display: none;
-}
-.js--image-preview:nth-child(2) {
-      background-image: url('https://gwiguyana.gy/sites/default/files/default_images/placeholder.png');
-}
-
-i.material-icons {
-    transition: color 100ms ease-in-out;
-    font-size: 2.25em;
-    line-height: 55px;
-    color: white;
-    display: block;
-}
-  
-.drop {
-    display: block;
-    position: absolute;
-    background: transparentize(red, .8);
-    border-radius: 100%;
-    transform:scale(0);
-}
-  
-.animate {
-    animation: ripple 0.4s linear;
-}
-  
-  @keyframes ripple {
-      100% {opacity: 0; transform: scale(2.5);}
+ /****************** createAccount's refresh btn ***********************/
+ .fa-refresh {
+    background-color: transparent;
+    border: none;
+    columns: #000000;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: none;
   }
-/*--------------------------------------------------*/
+
+  .fa-refresh:hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spin 0.8s linear infinite;
+    -moz-animation:spin 0.8s linear infinite;
+    animation:spin 0.8s linear infinite;
+    }
+
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+/******************end of createAccount's refresh btn ***********************/
+
 
  @media (min-width:851px) {
     .mainActionBtn {
-        /* float:left; */
-        /* width: 45%; */
-        margin-top:5%;
-        /* margin-left:4%; */
-        /* height: 525%; */
-        height: 300%;
+        margin-top:10%;
+        height: 100%;
+        border-radius: 1%;
         font-size: 200%;
+    }
+
+    .confirmBtn {
+        margin-top:10%;
+        height: 50%;
+        border-radius: 1%;
+        font-size: 100%;
     }
  }
 
@@ -191,4 +98,151 @@ i.material-icons {
     margin-top:5%;
     /* height: 125%; */
     }
-    }
+
+    
+/*----------------------ERAN----------------------*/
+
+* {
+    margin: 0px auto;
+    padding: 0;
+}
+
+article, aside, main, section, header, footer {
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+}
+
+#wrapper1 {
+    width: 100%;
+    margin: 0px auto;
+}
+
+#wrapper1 header {
+    width: 100%;
+    line-height: 985%;
+    font-size: 165%;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+}
+
+.flex-container > h4 {
+    margin-top: -80px;
+    font-size: 1.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+} 
+
+.upperside > h4 {
+    margin-top: -80px;
+    font-size: 1.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo1 {
+    width: 100px;
+    height: 100px;
+    background: url("../images/on.png") no-repeat;    
+    margin-left: 2%;
+}
+
+#logo2 {
+    display: inline-block;
+    width: 20%;
+    height: 128px;
+    background: url("../images/lock.png") no-repeat center center;
+    font-family: 'Black Han Sans', sans-serif;
+    text-decoration: none;
+    line-height: 9.5;
+    color: #3c2b2b;
+    font-size: 21px;
+    padding-left: 1%; 
+}
+
+#logo3 {
+    background: url("../images/gantz.png") no-repeat;   
+    border-radius:90%;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    margin-top: 1%;
+    margin-right: 0%;
+}
+
+#logo4 {
+    width: 100px;
+    height: 100px;
+    background: url("../images/hamburger.png") no-repeat;    
+    margin-right: 1%;
+    margin-top: 1%;
+}
+
+.upperside {
+    width: 100%;
+}
+
+.upperside > h4 {
+    text-align: center;
+    font-size: 200%;
+}
+
+.upperside > form > label {
+    font-size: 100%;
+    margin-left: 0.7%;
+}
+
+
+/*------------------------------------------*/
+
+
+#wrapper2 {
+    width: 100%;
+    margin: auto;
+}
+
+#wrapper2 header {
+    width: 100%;
+    line-height: 985%;
+    font-size: 165%;
+}
+
+
+/*--------------------ERAN's----------------------*/
+
+
+#wrapper3 {
+    width: 100%;
+    margin: auto;
+}
+
+#wrapper3 header {
+    width: 100%;
+    line-height: 985%;
+    font-size: 165%;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  /*----------------------End of eran-------------------*/
+
+}

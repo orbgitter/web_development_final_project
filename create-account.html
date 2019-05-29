@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <!-- meta data -->
-
 <head>
     <meta charset="UTF-8">
     <meta name ="viewport" content="width=device-width,initial-scale=1">
@@ -31,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Widthraw<span class="sr-only"></span></a>
+                            <a class="nav-link" href="Withdrawal.html">Widthraw<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
                                 <a class="nav-link" href="#">Deposite<span class="sr-only"></span></a>
@@ -40,11 +39,8 @@
                             <a class="nav-link" href="#">History <span class="fas fas-factory"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
-                        </li>
-                        <li class="nav-item">
                             <!-- If user is registered - display Log Out button; Otherwise - Display Create Account-->
-                            <a class="nav-link" href="#">Create Account<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#">Account<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Log Out</a>
@@ -88,21 +84,12 @@
                                 $('#birthDayCalendarBtn').datepicker({format: 'mm/dd/yyyy',startDate: '-3d'});
                                 });
                             </script>
-                        </div>>
-                            <div class="box">
-                                <div class="js--image-preview"></div>
-                                    <div class="upload-options">
-                                        <label>
-                                        <input type="file" class="image-upload" accept="image/*" />
-                                        </label>
-                                    </div>
-                                </div>                                        
-                           </div>
-                    <br>
+                        </div>                 
+                    </div>
                     <div class="form-group row">
                         <label for="userId" class="col-sm-2 col-form-label">ID</label>
                         <div class="col-sm-6">
-                            <input required type="text" class="form-control" pattern="[0-9]{9}" id="userId" placeholder="Insert ID Number (9 Digits)">
+                            <input required type="text" class="form-control" pattern="[0-9]{9}" id="userId" maxlength="9" placeholder="Insert ID Number (9 Digits)">
                         </div>
                     </div>
                         <div class="form-group row">
@@ -114,7 +101,7 @@
                         <div class="form-group row">
                             <label for="BranchName" class="col-sm-2 col-form-label">Branch's number:</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" pattern="[0-9]{1,4}" id="BranchName" placeholder="Insert Branch's number (up to 4 figures)">
+                                <input required type="text" class="form-control" pattern="[0-9]{1,4}" id="BranchName" maxlength="4" placeholder="Insert Branch's number (up to 4 figures)">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -128,43 +115,45 @@
                         <div class="form-group row">
                             <label for="guarantorFirstName" class="col-sm-2 col-form-label">Guarantor's First Name:</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" id="guarantorFirstName" placeholder="Insert First Name">
+                                <input type="text" class="form-control" id="guarantorFirstName" placeholder="Insert First Name">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="guarantorLastName" class="col-sm-2 col-form-label">Guarantor's Last Name:</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" id="guarantorLastName" placeholder="Insert Last Name">
+                                <input type="text" class="form-control" id="guarantorLastName" placeholder="Insert Last Name">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="guarantorId" class="col-sm-2 col-form-label">Guarantor's ID</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" pattern="[0-9]{9}" id="guarantorId" placeholder="Insert ID Number (9 Digits)">
+                                <input type="text" class="form-control" maxlength="9" pattern="[0-9]{9}" id="guarantorId" placeholder="Insert ID Number (9 Digits)">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="guarantorBankName" class="col-sm-2 col-form-label">Guarantor's Bank's Name</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" id="guarantorBankName" placeholder="Insert Bank's name">
+                                <input type="text" class="form-control" id="guarantorBankName" placeholder="Insert Bank's name">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="guarantorBranchName" class="col-sm-2 col-form-label">Guarantor's Branch's number:</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" pattern="[0-9]{1,4}" id="guarantorBranchName" placeholder="Insert Branch's number (up to 4 figures)">
+                                <input type="text" class="form-control" pattern="[0-9]{1,4}" id="guarantorBranchName" maxlength="4" placeholder="Insert Branch's number (up to 4 figures)">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="BankAccountNumber" class="col-sm-2 col-form-label">Guarantor's Bank Account number:</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" pattern="[0-9]{6,10}" id="BankAccountNumber" placeholder="Insert Account Number">
+                                <input type="text" class="form-control" pattern="[0-9]{6,10}" id="BankAccountNumber" placeholder="Insert Account Number">
                             </div>
-                            
                         </div>
                         <div class="form-group row">
-                            <div class="col-sm-6">
-                                <button id="submitAccount" type="submit" class="btn btn-success btn-lg btn-block">Confirm</button>
+                            <div class="col-12 text-center">
+                                    <div class="col-6 col-form-label">
+                                    </div>
+                                <a class="btn btn-primary btn-block mainActionBtn text-center" href="index.html">Confirm</a>
+                                <!-- <button id="submitAccount" type="submit" class="btn btn-success btn-lg btn-block" href="index.html">Confirm</button> -->
                             </div>
                         </div>
                      </div>
