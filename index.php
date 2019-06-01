@@ -1,3 +1,7 @@
+<?php
+    include(getcwd() . '\dbdonnect.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <!-- meta data -->
@@ -46,7 +50,16 @@
                             <a class="nav-link" href="#">Log Out</a>
                         </li>
                         <li class="nav-item">
-                                <h2 class="sumOfCash" href="#">₪50,000,000</h2>
+                                <h2 class="sumOfCash" href="#">₪
+                                    <?php
+                                        $query = "SELECT * FROM tbl_users_225";
+                                        $result = mysqli_query($connection, $query);
+
+                                        while($row = mysqli_fetch_assoc($result)) {
+                                            echo $row['Amount'];
+                                        }
+                                    ?>
+                                </h2>
                         </li>
                         <li class="nav-item">
                             <a id="userPic" href="#"></a>
