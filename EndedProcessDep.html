@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="includes/stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="includes/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
+    <!-- <link rel="stylesheet" type="text/css" href="includes/fontawesome-5.8.2.css"> -->
+    <link rel="stylesheet" href="includes/bootstrap-toggle/bootstrap-toggle.min.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="includes/jquery-3.4.1.min.js"></script>
+    <script src="includes/bootstrap.min.js"></script>
+    <script src="includes/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Papel</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Lavado De Papel</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item isActiveDespositorToggle">
+                            <input id="isActiveDepositorToggleBtn" type="checkbox" data-toggle="toggle">
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Withdrawal.html">Widthraw<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">History <span class="fas fas-factory"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- If user is registered - display Log Out button; Otherwise - Display Create Account-->
+                            <a class="nav-link" href="create-account.html">Create Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Log Out</a>
+                        </li>
+                        <li class="nav-item">
+                            <h2 class="sumOfCash" href="#">₪50,000,000</h2>
+                        </li>
+                        <li class="nav-item">
+                            <a id="userPic" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>            
+        </header>
+       <main>
+           <div class="QrScanner">
+               <h4>QR Scanner</h4>
+               <a id="QR" href="#"></a>
+               <div class='box'>
+                   <p>the process finish. press ok for success and return to home page. </p>
+                   <div class="buttons">
+                        <button type="button" class="btn btn-success btn-primary btn-lg" href="index.html">accept</button>
+                   </div>
+               </div>
+           </div>
+
+           
+       
+       </main>
+    </div>
+</body>
+</html>
