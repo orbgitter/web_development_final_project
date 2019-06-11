@@ -82,23 +82,16 @@ nav, aside, section,article, header,footer, main{
 
  @media (min-width:591px) and (max-width:850px) {
     .mainActionBtn {
-        /* float:left; */
-        /* width: 100%; */
         margin-top:5%;
-        /* height: 225%; */
     }
 }
 
 @media (max-width:590px) {
-.mainActionBtn {
-    /* float:left; */
-    /* clear:both; */
-    /* top:10px; */
-    /* width: 100%; */
-    margin-top:5%;
-    /* height: 125%; */
+    .mainActionBtn {
+        margin-top:5%;
+        
     }
-
+}
     
 /*----------------------ERAN----------------------*/
 
@@ -107,25 +100,11 @@ nav, aside, section,article, header,footer, main{
     padding: 0;
 }
 
-article, aside, main, section, header, footer {
-    display: block;
-}
-
 body {
     font-family: Arial, sans-serif;
     font-size: 100%;
 }
 
-#wrapper1 {
-    width: 100%;
-    margin: 0px auto;
-}
-
-#wrapper1 header {
-    width: 100%;
-    line-height: 985%;
-    font-size: 165%;
-}
 
 .flex-container {
     width: 100%;
@@ -151,44 +130,6 @@ body {
     margin-right: auto;
 }
 
-#logo1 {
-    width: 100px;
-    height: 100px;
-    background: url("../images/on.png") no-repeat;    
-    margin-left: 2%;
-}
-
-#logo2 {
-    display: inline-block;
-    width: 20%;
-    height: 128px;
-    background: url("../images/lock.png") no-repeat center center;
-    font-family: 'Black Han Sans', sans-serif;
-    text-decoration: none;
-    line-height: 9.5;
-    color: #3c2b2b;
-    font-size: 21px;
-    padding-left: 1%; 
-}
-
-#logo3 {
-    background: url("../images/gantz.png") no-repeat;   
-    border-radius:90%;
-    width: 100px;
-    height: 100px;
-    text-decoration: none;
-    margin-top: 1%;
-    margin-right: 0%;
-}
-
-#logo4 {
-    width: 100px;
-    height: 100px;
-    background: url("../images/hamburger.png") no-repeat;    
-    margin-right: 1%;
-    margin-top: 1%;
-}
-
 .upperside {
     width: 100%;
 }
@@ -203,36 +144,6 @@ body {
     margin-left: 0.7%;
 }
 
-
-/*------------------------------------------*/
-
-
-#wrapper2 {
-    width: 100%;
-    margin: auto;
-}
-
-#wrapper2 header {
-    width: 100%;
-    line-height: 985%;
-    font-size: 165%;
-}
-
-
-/*--------------------ERAN's----------------------*/
-
-
-#wrapper3 {
-    width: 100%;
-    margin: auto;
-}
-
-#wrapper3 header {
-    width: 100%;
-    line-height: 985%;
-    font-size: 165%;
-}
-
 input[type=button], input[type=submit], input[type=reset] {
     background-color: #4CAF50;
     border: none;
@@ -243,6 +154,227 @@ input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
   }
 
-  /*----------------------End of eran-------------------*/
+  /*----------------------stil eran-------------------*/
 
+
+
+
+  #contributesTable > thead tr {
+    background: #B33D45;
+    color: white;
+}
+
+#contributesTable > tbody tr:nth-of-type(odd) {
+    background-color: #FBDCDB !important;
+}
+
+
+#userPic2 {
+    background: url("../images/avi.jpg") no-repeat;   
+    border-radius:20000000000000000%;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    margin-top: 0%;
+    margin-bottom: 10px;
+    padding-right: 0%;
+    float:left;
+}
+
+.table-bordered td {border: none !important; border-right: solid 1px #ccc !important;}
+
+
+.btn-group-vertical{
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+
+
+
+/*----QrScanner-----*/
+
+.QrScanner{
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#QR{
+    background: url("../images/unnamed.png") no-repeat;   
+    width: 512px;
+    height: 512px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    width: 400px;
+    height: 200px;
+    background-color: #F7FADE;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -350px;
+    margin-bottom: 150px;
+}
+
+.buttons {
+    margin-top: 35px;
+}
+
+
+
+/*--------userDetailsPage--------*/
+
+
+.userDetailsUp {
+    margin-top: 10%;
+    width: 20%;
+
+}
+
+.userDetailsUserName {
+    font-size: 1.5em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.userDetailsHeadline {
+    width: 100px;
+    height: 100px;
+    background: url("../images/avigabai.jpg")no-repeat top right;
+    margin-top: 10.5%;
+    margin-right: 20%;
+    float: right;
+}
+
+.userDetailsList {
+    margin-top: 10%;
+    margin-left: 2%;
+    list-style-type: none;
+    font-size: 21px;
+    line-height: 300%;
+    width: 80%;
+}
+
+.userDetailsRank {
+    width: 100px;
+    height: 100px;
+    background: url("../images/3stars.png")no-repeat top right;
+    margin-right: 40%;
+}
+
+.userDetailsDown { margin: 0%; }
+
+.userDetailsList2 {
+    list-style-type: none;
+    font-size: 21px;
+    line-height: 300%;
+    width: 80%;
+}
+
+.userDetailsFace {
+    width: 70px;
+    height: 50px;
+    background: url("../images/face.png")no-repeat top;
+    margin-top: 0.5%;
+    float: left;
+}
+
+.userDetailsA1 {
+    margin-top: 0%;
+}
+
+.userDetailsA2 {
+    width: 100px;
+    height: 100px;
+    background: url("../images/3stars.png")no-repeat top right;
+    margin-right: 40%;
+    margin-top: -1%;
+}
+
+.userDetailsParagraphDiv {
+    margin: 0%;
+    margin-left: 1%;
+    font-size: 15px;
+}
+
+#userDetailsList2:nth-child(even) {
+    background-color: #CF868B;
+}
+
+
+
+/*--------historyPage--------*/
+
+.historyUpperSide {
+    margin-top: 10%;
+}
+
+.historyUserName {
+    font-size: 1.5em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.historyDownSise {
+    margin: 0%;
+}
+
+.historyList2 {
+    list-style-type: none;
+    font-size: 21px;
+    line-height: 300%;
+    width: 80%;
+}
+
+.historyFace {
+    width: 50px;
+    height: 50px;
+    background: url("../images/avi.jpg")no-repeat top;
+    border-radius: 200000000%;
+    margin-top: 0.5%;
+    margin-left: 1%;
+    margin-right: 2%;
+    float: left;
+}
+
+.historyA1 {
+    margin-top: 0%;
+    margin-right: 2%;
+}
+
+.historyA2 {
+    margin-top: 0%;
+}
+
+.historyList3 {
+    list-style-type: none;
+    font-size: 21px;
+    line-height: 300%;
+    width: 80%;
+}
+
+.historyA3 {
+    margin: 0%;
+    margin-left: 1%;
+    margin-right: 2%;
+}
+
+.historyA4 {
+    margin-top: 0%;
+    margin-right: 2%;
+}
+
+.historyA5 {
+    margin-top: 0%;
 }

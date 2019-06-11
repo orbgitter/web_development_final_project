@@ -1,68 +1,69 @@
 
-var contributes = [["or", 105, 100, "100 meter"], ["bar", 152, 150, "99 meter"], ["ron", 127, 132, "88 meter"], ["shoval", 192, 154, "67 meter"],
-                    ["or", 105, 100, "100 meter"], ["bar", 152, 150, "99 meter"], ["ron", 127, 132, "88 meter"], ["shoval", 192, 154, "67 meter"],
-                    ["or", 105, 100, "100 meter"], ["bar", 152, 150, "99 meter"], ["ron", 127, 132, "88 meter"], ["shoval", 192, 154, "67 meter"],
-                    ["or", 105, 100, "100 meter"], ["bar", 152, 150, "99 meter"], ["ron", 127, 132, "88 meter"], ["shoval", 192, 154, "67 meter"]]
-
-window.onload= function() {
-
-    var nav = document.createElement('class');
-    var wrap = document.getElementById('wrapper1');
-    wrap.appendChild(nav);
-    nav.style.backgroundColor= "#a00d17";
-    nav.style.listStyleType= "none";
-    nav.style.textAlign= "center";
-    nav.style.width= "100%";
-    nav.style.display= "flex";
-
-    for(var i = 0; i < 4; i++){
-        var list = document.createElement('li');
-        list.style.display= "inline-block";
-        list.style.fontSize= "20px";
-        list.style.width= "25%";
-        nav.appendChild(list);
-
-        var a = document.createElement('a');
-        a.style.textDecoration= "none";
-        a.style.listStyle= "none";
-        a.style.color= "white";
-        if (i == 0)
-            a.innerText = "Donor";
-        if (i == 1)
-            a.innerText = "Include interest";
-        if (i == 2)
-            a.innerText = "Offering sum";
-        if (i == 3)
-            a.innerText = "Distance";
-    
-        list.appendChild(a);
+// Static contributes data. will be deleted once there is a database with the relevant data
+const contributes = [
+    {
+        name: "Oren",
+        includeInterest: 105,
+        offeringSum: 100,
+        distance: 100
+    },
+    {
+        name: "Moti",
+        includeInterest: 105,
+        offeringSum: 100,
+        distance: 103
+    },
+    {
+        name: "Ilan",
+        includeInterest: 105,
+        offeringSum: 100,
+        distance: 112
+    },
+    {
+        name: "Yossi",
+        includeInterest: 110,
+        offeringSum: 100,
+        distance: 105
+    },
+    {
+        name: "Avner",
+        includeInterest: 101,
+        offeringSum: 120,
+        distance: 102
+    },
+    {
+        name: "Beti",
+        includeInterest: 202,
+        offeringSum: 140,
+        distance: 120
     }
+]
 
-    var customers = document.createElement('class');
-    wrap.appendChild(customers);
-    customers.style.listStyleType= "none";
-    customers.style.textAlign= "center";
+$("document").ready(function() {
 
-    for(var i = 0; i < contributes.length; i++){
-        var list2 = document.createElement('BUTTON');
-        list2.style.display = "inline-block";
-        list2.style.fontSize= "20px";
-        list2.style.backgroundColor= "#ffe6e6";
-        list2.style.display= "flex";
-        list2.style.width= "100%";
-        if(i % 2 == 0)
-            list2.style.backgroundColor = "gray";
-        customers.appendChild(list2);
-        
+    // let contributesTable = $("#contributesTable");
 
-        for(var j = 0; j < 4; j++){
-            var a1 = document.createElement('a');
-            a1.href = "UserDetails2.php";
-            a1.style.textDecoration= "none";
-            a1.style.listStyle= "none";
-            a1.style.width= "50%";
-            a1.innerHTML = contributes[i][j];
-            list2.appendChild(a1);
-        }
+    // Get contributes list from Database...
+
+    for(let i = 0; i < contributes.length; i++) {
+        let tableRow = $('<tr/>');
+        let tableDataName = $('<td>', {
+            text: contributes[i].name
+        });
+        let tableDataIncludeInterest = $('<td>', {
+            text: contributes[i].includeInterest
+        });
+        let tableDataOfferingSum = $('<td>', {
+            text: contributes[i].offeringSum
+        });
+        let tableDataDistance = $('<td>', {
+            text: contributes[i].distance
+        });
+        tableDataName.appendTo(tableRow);
+        tableDataIncludeInterest.appendTo(tableRow);
+        tableDataOfferingSum.appendTo(tableRow);
+        tableDataDistance.appendTo(tableRow);
+
+        tableRow.appendTo('#contributesTable tbody');
     }
-  };
+});
