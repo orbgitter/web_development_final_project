@@ -1,3 +1,7 @@
+<?php
+    include(getcwd() . '\includes\session.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

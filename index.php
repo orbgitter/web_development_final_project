@@ -1,5 +1,5 @@
 <?php
-    include(getcwd() . '\dbdonnect.php');
+    include(getcwd() . '\includes\session.php');
 ?>
 
 <!DOCTYPE html>
@@ -47,17 +47,17 @@
                             <a class="nav-link" href="create-account.html">Account</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Log Out</a>
+                            <a class="nav-link" href="includes/logout.php">Log Out</a>
                         </li>
                         <li class="nav-item">
                                 <h2 class="sumOfCash" href="#">₪
                                     <?php
-                                        $query = "SELECT * FROM tbl_users_225";
-                                        $result = mysqli_query($connection, $query);
+                                        // $query = "SELECT * FROM tbl_users_225";
+                                        // $result = mysqli_query($connection, $query);
 
-                                        while($row = mysqli_fetch_assoc($result)) {
-                                            echo $row['Amount'];
-                                        }
+                                        // while($row = mysqli_fetch_assoc($result)) {
+                                        //     echo $row['Amount'];
+                                        // }
                                     ?>
                                 </h2>
                         </li>

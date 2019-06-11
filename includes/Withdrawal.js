@@ -57,7 +57,7 @@ window.onload= function() {
 
         for(var j = 0; j < 4; j++){
             var a1 = document.createElement('a');
-            a1.href = "UserDetails2.html";
+            a1.href = "UserDetails2.php";
             a1.style.textDecoration= "none";
             a1.style.listStyle= "none";
             a1.style.width= "50%";

@@ -23,15 +23,44 @@ $("document").ready(function() {       //Main
         $("#hashCodePlaceHolder").text(generatedHashcode);
     });
 
-        $("#submitAccount").click(function() {
+    $("#submitAccount").click(function() {
 
-        // let formObj = $("#createAccountForm");
-        // console.log(formObj);
-        // formObj.validate();
-        // if(formObj.valid()) {
-        //     console.log("FORM IS VALID");
-        // }
-        // else 
-        //     console.log("FORM IS NOT VALID");
+    // let formObj = $("#createAccountForm");
+    // console.log(formObj);
+    // formObj.validate();
+    // if(formObj.valid()) {
+    //     console.log("FORM IS VALID");
+    // }
+    // else 
+    //     console.log("FORM IS NOT VALID");
     });
+
+    // $("#logoutBtn").click(function() {
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "includes/logout.php",
+    //         data: null,
+    //         cache: true,
+    //         success: function(data) {
+    //             console.log(data);
+    //             let userObj = JSON.parse(data);
+                
+    //             // Login is failed
+    //             if(userObj == null) {
+                    
+    //             }
+    //             // Login succeeded
+    //             else {
+    //                 window.location.replace("index.php");
+    //             }
+    //         },
+    //         error: function(event) {
+    //             console.log(event);
+    //             console.log("fail");
+    //         }
+    //     }).done(function(event) {
+    //         console.log(event);
+    //         console.log("done");
+    //     });
+    // });
 });
