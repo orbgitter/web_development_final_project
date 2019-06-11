@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="includes/stylesheet.css">
-    <script src="includes/Withdrawal.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,16 +13,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="includes/jquery-3.4.1.min.js"></script>
     <script src="includes/bootstrap.min.js"></script>
-    <script src="includes/scripts.js"></script>
+    <script src="includes/Withdrawal.js"></script>
     <script src="includes/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
-
+    <!-- <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script> -->
+    <link rel="stylesheet" href="includes/stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>Papel</title>
 </head>
 <body>
-    <div id="wrapper1">
+    <div id="wrapper">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">Lavado De Papel</a>
@@ -60,30 +58,61 @@
                 </div>
             </nav>          
         </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="text-center">Withdrawal</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="upperside">
 
-
-        <ul class="upperside">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h3 class="text-center">Withdrawal</h3>
+                        <form name="myForm" action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET" autocomplete="on">
+                            <label>Demanding sum: <input name="fullName"></label>
+                            <br><br>
+                            <br><br>
+                            <label>Up to deviation of: </label> <input type="number" name="tech" value="2" min="2" max="60" step="2" > 
+                            &nbsp &nbsp include interest: <input type="checkbox" name="hobbies" value="Reading Books"><br>
+                                <br><br>
+                                <br><br>
+                        </form>
+                    </ul>
+                </div>
+                <div class="row">
+                    <table id="contributesTable" class="table table-striped" onclick="location.href='UserDetails2.html'">
+                        <thead>
+                          <tr>
+                            <th scope="col">Donor</th>
+                            <th scope="col">Include interest</th>
+                            <th scope="col">Offering sum</th>
+                            <th scope="col">Distance (Meters)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr> -->
+                        </tbody>
+                      </table>
                 </div>
             </div>
-            <br><br>
-            <form name="myForm" action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET" autocomplete="on">
-                <label>Demanding sum: <input name="fullName"></label>
-                <br><br>
-                <br><br>
-                <label>Up to deviation of: </label> <input type="number" name="tech" value="2" min="2" max="60" step="2" > 
-                &nbsp &nbsp include interest: <input type="checkbox" name="hobbies" value="Reading Books"><br>
-                 <br><br>
-                 <br><br>
-            </form>
-        </ul>
-
-
-
-        
-        
+        </main>
     </div>
 </body>
 </html>
