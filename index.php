@@ -9,17 +9,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, use-scalable=0">
-    <link rel="stylesheet" type="text/css" href="includes/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="includes/3rd_parties/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
-    <!-- <link rel="stylesheet" type="text/css" href="includes/fontawesome-5.8.2.css"> -->
-    <link rel="stylesheet" href="includes/bootstrap-toggle/bootstrap-toggle.min.css"></script>
+    <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
 
-    <script src="includes/jquery-3.4.1.min.js"></script>
-    <script src="includes/bootstrap.min.js"></script>
+    <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
+    <script src="includes/3rd_parties/bootstrap.min.js"></script>
     <script src="includes/scripts.js"></script>
-    <script src="includes/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
     <title>Lavado De Papel</title>
 </head>
 <body id="">
@@ -44,7 +41,7 @@
                         </li>
                         <li class="nav-item">
                             <!-- If user is registered - display Log Out button; Otherwise - Display Create Account-->
-                            <a class="nav-link" href="create-account.html">Account</a>
+                            <a class="nav-link" href="create-account.php">Account</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="includes/logout.php">Log Out</a>

@@ -2,26 +2,44 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, use-scalable=0">
-        <link rel="stylesheet" type="text/css" href="includes/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="includes/3rd_parties/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
-        <!-- <link rel="stylesheet" type="text/css" href="includes/fontawesome-5.8.2.css"> -->
-        <link rel="stylesheet" href="includes/bootstrap-toggle/bootstrap-toggle.min.css"></script>
     
-        <script src="includes/jquery-3.4.1.min.js"></script>
-        <script src="includes/bootstrap.min.js"></script>
+        <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
+        <script src="includes/3rd_parties/bootstrap.min.js"></script>
+        <script src="includes/utils.js"></script>
         <script src="includes/login.js"></script>
-        <script src="includes/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+
         <title>Lavado De Papel- Login</title>
     </head>
-    <body>
-        <form id="loginForm" action="" method="POST">
-            Enter username: <input type="text" name="username" value=""><br>
-            Enter password: <input type="password" name="password" value="">
-            <br><br>
-            <input type="submit" value="Submit Form">
-        </form>
+    <body id="loginBody">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Tabs Titles -->
+            
+                <!-- Icon -->
+                <div class="fadeIn first">
+                    <img src="images/logo.png" id="icon" alt="Lavado de papel" />
+                </div>
+            
+                <!-- Login Form -->
+                <form id="loginForm" action="" method="POST">
+                <input type="text" id="login" class="fadeIn second" name="username" placeholder="Username">
+                <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+                <input type="submit" class="fadeIn fourth" value="Log In">
+                </form>
+            
+                <div id="formFooter">
+                <a class="underlineHover" href="create-account.php?newUser=true">Register</a>
+                </div>
+            
+            </div>
+        </div>
     </body>
 </html>

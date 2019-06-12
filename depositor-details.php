@@ -5,26 +5,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="includes/stylesheet.css">
     <script src="includes/UserDetails.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="includes/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="includes/3rd_parties/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
-    <!-- <link rel="stylesheet" type="text/css" href="includes/fontawesome-5.8.2.css"> -->
-    <link rel="stylesheet" href="includes/bootstrap-toggle/bootstrap-toggle.min.css"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="includes/jquery-3.4.1.min.js"></script>
-    <script src="includes/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
+    <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
+    <script src="includes/3rd_parties/bootstrap.min.js"></script>
     <script src="includes/scripts.js"></script>
-    <script src="includes/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
     <title>Papel</title>
 </head>
 <body>

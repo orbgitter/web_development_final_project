@@ -6,10 +6,18 @@ $("document").ready(function() {       //Main
     $("#loginForm").submit(function(event) {
         console.log("BLA");
 
-        let username = $("input[name=username]").val();
-        let password = $("input[name=password]").val();
+        let dataString = generateDataString([
+            {
+                name: 'username',
+                value: $("input[name=username]").val()
+            },
+            {
+                name: 'password',
+                value: $("input[name=password]").val()
+            }
+        ]);
 
-        let dataString = `username=${username}&password=${password}`;
+        // let dataString = `username=${username}&password=${password}`;
 
         $.ajax({
             type: "POST",
@@ -37,7 +45,6 @@ $("document").ready(function() {       //Main
             console.log(event);
             console.log("done");
         });
-
         // In order to avoid the form redirection
         return false;
     });
