@@ -1,3 +1,16 @@
+<?php
+    include(getcwd() . '\dbdonnect.php');
+
+    $isNewUser =  isset($_GET['newUser']);
+    if(!$isNewUser) {
+        session_start();
+        $userId = $_SESSION['user_id'];
+        $query = "SELECT * FROM tbl_users_225 WHERE UserId = '$userId'";
+        $result = mysqli_query($connection, $query);
+        $userDetails = mysqli_fetch_assoc($result);
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 <!-- meta data -->
@@ -51,25 +64,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h3 class="text-center">Create New Account</h3>
+                        <h3 class="text-center"><?php echo $isNewUser? 'Create New Account' : 'Edit Account' ?> </h3>
                     </div>
                 </div>
+
                 <form id="createAccountForm">
-                    
                     <div class="form-group row">
-                        <label for="firstName" class="col-sm-2 col-form-label">First Name:</label>
+                        <label for="fullName" class="col-sm-2 col-form-label">Full Name</label>
                         <div class="col-sm-6">
-                            <input required type="text" name="firstName" class="form-control" id="firstName" placeholder="Insert First Name">
+                            <input required type="text" name="fullName" class="form-control" id="fullName" placeholder="Insert Full Name" value=<?php echo isset($userDetails["UserName"]) ? $userDetails["UserName"] : null ?>>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="lastName" class="col-sm-2 col-form-label">Last Name:</label>
+                        <label for="userName" class="col-sm-2 col-form-label">User Name</label>
                         <div class="col-sm-6">
-                            <input required type="text" name="lastName" class="form-control" id="lastName" placeholder="Insert Last Name">
+                            <input required type="text" name="userName" class="form-control" id="userName" placeholder="Insert User Name">
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <label for="birthdate" class="col-sm-2 col-form-label">Birth Date:</label>
+                    <!-- <div class="form-group row">
+                        <label for="birthdate" class="col-sm-2 col-form-label">Birth Date</label>
                         <div class="col-sm-6">
                             <div class="input-group date" data-provide="datepicker">
                                 <input type="text" name="birthdate" id="birthdate" class="form-control" data-date-format="mm/dd/yyyy">
@@ -78,11 +91,12 @@
                                     </div>
                             </div>
                         </div>                 
-                    </div>
+                    </div> -->
                     <div class="form-group row">
-                        <label for="userName" class="col-sm-2 col-form-label">ID</label>
+                        <label for="userId" class="col-sm-2 col-form-label">ID</label>
                         <div class="col-sm-6">
-                            <input required type="text" name="userName" class="form-control" pattern="[0-9]{9}" id="userId" maxlength="9" placeholder="Insert ID Number (9 Digits)">
+                            <!-- TODO: add this validation: pattern="[0-9]{9}" -->
+                            <input required type="text" name="userId" class="form-control" id="userId" maxlength="9" placeholder="Insert ID Number (9 Digits)">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -92,47 +106,27 @@
                         </div>
                     </div>
                         <div class="form-group row">
-                            <label for="BankName" class="col-sm-2 col-form-label">Bank's Name</label>
+                            <label for="bankName" class="col-sm-2 col-form-label">Bank's Name</label>
                             <div class="col-sm-6">
                                 <input required type="text" class="form-control" name="bankName" id="bankName" placeholder="Insert Bank's name">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="bankAccountNumber" class="col-sm-2 col-form-label">Bank Account number:</label>
+                            <label for="bankAccountNumber" class="col-sm-2 col-form-label">Bank Account number</label>
                             <div class="col-sm-6">
                                 <input required type="text" class="form-control" pattern="[0-9]{6,10}" name="bankAccountNumber" id="bankAccountNumber" placeholder="Insert Account Number">
                             </div>
                         </div>
-                        <br>
-                        <p>*A guarantor is recommended to prevent service block at overdraft </p>
                         <div class="form-group row">
-                            <label for="guarantorFirstName" class="col-sm-2 col-form-label">Guarantor's First Name:</label>
+                            <label for="branchNumber" class="col-sm-2 col-form-label">Branch Number</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" name="guarantorFirstName" id="guarantorFirstName" placeholder="Insert First Name">
+                                <input required type="text" class="form-control" name="branchNumber" id="branchNumber" placeholder="Insert branch number">
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="guarantorLastName" class="col-sm-2 col-form-label">Guarantor's Last Name:</label>
+                            <label for="amount" class="col-sm-2 col-form-label">Amount</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control"name="guarantorLastName"  id="guarantorLastName" placeholder="Insert Last Name">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="guarantorId" class="col-sm-2 col-form-label">Guarantor's ID</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" maxlength="9" pattern="[0-9]{9}" name="guarantorId" id="guarantorId" placeholder="Insert ID Number (9 Digits)">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="guarantorBankName" class="col-sm-2 col-form-label">Guarantor's Bank's Name</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" name="guarantorBankName" id="guarantorBankName" placeholder="Insert Bank's name">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="guarantorBankAccountNumber" class="col-sm-2 col-form-label">Guarantor's Bank Account number:</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" pattern="[0-9]{6,10}" name="guarantorBankAccountNumber" id="BankAccountNumber" placeholder="Insert Account Number">
+                                <input required type="text" class="form-control" name="amount" id="amount" placeholder="Amount of money in the account">
                             </div>
                         </div>
                         <div class="form-group row">
