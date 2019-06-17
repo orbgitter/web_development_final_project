@@ -1,7 +1,7 @@
 
 $("document").ready(function() {       //Main
 
-    let isLoginSucceeded = false;
+    let errorCredtialsMsg = $("#incorrectCredentials");
 
     $("#loginForm").submit(function(event) {
         console.log("BLA");
@@ -17,8 +17,6 @@ $("document").ready(function() {       //Main
             }
         ]);
 
-        // let dataString = `username=${username}&password=${password}`;
-
         $.ajax({
             type: "POST",
             url: "login_session.php",
@@ -27,23 +25,22 @@ $("document").ready(function() {       //Main
             success: function(data) {
                 console.log(data);
                 let userObj = JSON.parse(data);
-                
+
                 // Login is failed
                 if(userObj == null) {
-                    
+                    errorCredtialsMsg.css('visibility', 'visible');
                 }
                 // Login succeeded
                 else {
+                    errorCredtialsMsg.css('visibility', 'hidden');
                     window.location.replace("index.php");
                 }
             },
             error: function(event) {
-                console.log(event);
-                console.log("fail");
+                // console.log(event);
             }
         }).done(function(event) {
-            console.log(event);
-            console.log("done");
+            // console.log(event);
         });
         // In order to avoid the form redirection
         return false;

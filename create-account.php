@@ -8,6 +8,7 @@
         $query = "SELECT * FROM tbl_users_225 WHERE UserId = '$userId'";
         $result = mysqli_query($connection, $query);
         $userDetails = mysqli_fetch_assoc($result);
+        // $userDetails["FullName"] = 
     }
 ?>
 
@@ -72,13 +73,13 @@
                     <div class="form-group row">
                         <label for="fullName" class="col-sm-2 col-form-label">Full Name</label>
                         <div class="col-sm-6">
-                            <input required type="text" name="fullName" class="form-control" id="fullName" placeholder="Insert Full Name" value=<?php echo isset($userDetails["FullName"]) ? $userDetails["FullName"] : null ?>>
+                            <input required type="text" name="fullName" class="form-control" id="fullName" placeholder="Insert Full Name" value='<?php echo isset($userDetails["FullName"]) ? $userDetails["FullName"] : null ?>'>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="userName" class="col-sm-2 col-form-label">User Name</label>
                         <div class="col-sm-6">
-                            <input required type="text" name="userName" class="form-control" id="userName" placeholder="Insert User Name"  value=<?php echo isset($userDetails["UserName"]) ? $userDetails["UserName"] : null ?>>
+                            <input required type="text" name="userName" class="form-control" id="userName" placeholder="Insert User Name"  value='<?php echo isset($userDetails["UserName"]) ? $userDetails["UserName"] : null ?>'>
                         </div>
                     </div>
                     <!-- <div class="form-group row">
@@ -96,37 +97,37 @@
                         <label for="userId" class="col-sm-2 col-form-label">ID</label>
                         <div class="col-sm-6">
                             <!-- TODO: add this validation: pattern="[0-9]{9}" -->
-                            <input required type="text" name="userId" class="form-control" id="userId" maxlength="9" placeholder="Insert ID Number (9 Digits)"  value=<?php echo isset($userDetails["UserId"]) ? $userDetails["UserId"] : null ?>>
+                            <input required type="text" name="userId" class="form-control" id="userId" maxlength="9" placeholder="Insert ID Number (9 Digits)"  value='<?php echo isset($userDetails["UserId"]) ? $userDetails["UserId"] : null ?>'>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="password" class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-6">
-                            <input required type="password" name="password" class="form-control" id="password" maxlength="32" placeholder="Insert a password"  value=<?php echo isset($userDetails["Password"]) ? $userDetails["Password"] : null ?>>
+                            <input required type="password" name="password" class="form-control" id="password" maxlength="32" placeholder="Insert a password"  value='<?php echo isset($userDetails["Password"]) ? $userDetails["Password"] : null ?>'>
                         </div>
                     </div>
                         <div class="form-group row">
                             <label for="bankName" class="col-sm-2 col-form-label">Bank's Name</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" name="bankName" id="bankName" placeholder="Insert Bank's name"  value=<?php echo isset($userDetails["BankName"]) ? $userDetails["BankName"] : null ?>>
+                                <input required type="text" class="form-control" name="bankName" id="bankName" placeholder="Insert Bank's name"  value='<?php echo isset($userDetails["BankName"]) ? $userDetails["BankName"] : null ?>'>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="bankAccountNumber" class="col-sm-2 col-form-label">Bank Account number</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" pattern="[0-9]{6,10}" name="bankAccountNumber" id="bankAccountNumber" placeholder="Insert Account Number"  value=<?php echo isset($userDetails["BankAccountNumber"]) ? $userDetails["BankAccountNumber"] : null ?>>
+                                <input required type="text" class="form-control" pattern="[0-9]{6,10}" name="bankAccountNumber" id="bankAccountNumber" placeholder="Insert Account Number"  value='<?php echo isset($userDetails["BankAccountNumber"]) ? $userDetails["BankAccountNumber"] : null ?>'>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="branchNumber" class="col-sm-2 col-form-label">Branch Number</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" name="branchNumber" id="branchNumber" placeholder="Insert branch number"  value=<?php echo isset($userDetails["BranchNumber"]) ? $userDetails["BranchNumber"] : null ?>>
+                                <input required type="text" class="form-control" name="branchNumber" id="branchNumber" placeholder="Insert branch number"  value='<?php echo isset($userDetails["BranchNumber"]) ? $userDetails["BranchNumber"] : null ?>'>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="amount" class="col-sm-2 col-form-label">Amount</label>
                             <div class="col-sm-6">
-                                <input required type="text" class="form-control" name="amount" id="amount" placeholder="Amount of money in the account"  value=<?php echo isset($userDetails["Amount"]) ? $userDetails["Amount"] : null ?>>
+                                <input required type="text" class="form-control" name="amount" id="amount" placeholder="Amount of money in the account"  value='<?php echo isset($userDetails["Amount"]) ? $userDetails["Amount"] : null ?>'>
                             </div>
                         </div>
                         <div class="form-group row">

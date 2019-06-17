@@ -1,5 +1,4 @@
 <?php
-    include('..\dbdonnect.php');
     session_start();
     $userDetails = NULL;
     if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] == -1) {

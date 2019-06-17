@@ -18,16 +18,6 @@ nav, aside, section,article, header,footer, main{
     background: green !important;
 }
 
-#userPic {
-    background: url("../images/gantz.png") no-repeat;   
-    border-radius:20000000000000000%;
-    width: 100px;
-    height: 90px;
-    text-decoration: none;
-    margin-top: 0%;
-    margin-bottom: 10px;
-    padding-right: 0%;
-    float:left;
 }
 
  body {
@@ -99,7 +89,13 @@ nav, aside, section,article, header,footer, main{
     -webkit-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
   }
-  
+
+  #loginBody #incorrectCredentials {
+    color: #B33D45;
+    font-weight: bold;
+    margin-top: 10px;
+    visibility: hidden;
+  }
   
   
   /* TABS */
