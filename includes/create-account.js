@@ -6,6 +6,11 @@ $("document").ready(function() {       //Main
     // defaultDate.setFullYear( defaultDate.getFullYear() - 18 );
     // $('#birthdate').datepicker({format: 'mm/dd/yyyy', endDate: defaultDate });
 
+    // let getParamNewUser = findGetParameter("newUser");
+    // let isNewUser = (getParamNewUser != null && getParamNewUser === "true");
+
+    let isNewUser = findGetParameter("newUser") === "true";
+    console.log(isNewUser);
 
 
     $("button[type=submit]").click(function() {
@@ -49,6 +54,10 @@ $("document").ready(function() {       //Main
             {
                 name: 'bankAccountNumber',
                 value: $("input[name=bankAccountNumber]").val()
+            },
+            {
+                name: 'newUser',
+                value: isNewUser
             }
         ]);
 
@@ -58,17 +67,15 @@ $("document").ready(function() {       //Main
             data: dataString,
             cache: true,
             success: function(data) {
-                console.log(data);
-                // let userObj = JSON.parse(data);
-                
-                // // Login is failed
-                // if(userObj == null) {
-                    
-                // }
-                // // Login succeeded
-                // else {
-                //     window.location.replace("index.php");
-                // }
+                let resultObj = JSON.parse(data);
+                if(resultObj.result === true) {
+                    window.location.replace("index.php");
+                }
+                else {
+                    // PRINT / DISPLAY that user details failed
+                    console.log(resultObj.message)
+                }
+
             },
             error: function(event) {
                 console.log(event);

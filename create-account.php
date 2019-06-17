@@ -4,8 +4,8 @@
     $isNewUser =  isset($_GET['newUser']);
     if(!$isNewUser) {
         session_start();
-        $userId = $_SESSION['user_id'];
-        $query = "SELECT * FROM tbl_users_225 WHERE UserId = '$userId'";
+        $id = $_SESSION['id'];
+        $query = "SELECT * FROM tbl_users_225 WHERE Id = $id";
         $result = mysqli_query($connection, $query);
         $userDetails = mysqli_fetch_assoc($result);
         // $userDetails["FullName"] = 
