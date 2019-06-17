@@ -38,10 +38,10 @@
                         </li>
                         <li class="nav-item">
                             <!-- If user is registered - display Log Out button; Otherwise - Display Create Account-->
-                            <a class="nav-link" href="create-account.html">Account</a>
+                            <a class="nav-link" href="create-account.php">Account</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Log Out</a>
+                            <a class="nav-link" href="includes/logout.php">Log Out</a>
                         </li>
                         <li class="nav-item">
                             <h2 class="sumOfCash" href="#">₪</h2>
