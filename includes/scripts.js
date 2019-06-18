@@ -34,33 +34,4 @@ $("document").ready(function() {       //Main
     // else 
     //     console.log("FORM IS NOT VALID");
     });
-
-    // $("#logoutBtn").click(function() {
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "includes/logout.php",
-    //         data: null,
-    //         cache: true,
-    //         success: function(data) {
-    //             console.log(data);
-    //             let userObj = JSON.parse(data);
-                
-    //             // Login is failed
-    //             if(userObj == null) {
-                    
-    //             }
-    //             // Login succeeded
-    //             else {
-    //                 window.location.replace("index.php");
-    //             }
-    //         },
-    //         error: function(event) {
-    //             console.log(event);
-    //             console.log("fail");
-    //         }
-    //     }).done(function(event) {
-    //         console.log(event);
-    //         console.log("done");
-    //     });
-    // });
 });

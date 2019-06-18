@@ -25,7 +25,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">Lavado De Papel</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarText" aria-expanded="true" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
@@ -49,6 +49,7 @@
                         <li class="nav-item">
                                 <h2 class="sumOfCash" href="#">₪
                                     <?php
+                                        echo $userDetails["Amount"];
                                         echo substr($userDetails["FullName"], 0, strpos($userDetails["FullName"], ' '));
                                     ?>
                                 </h2>
