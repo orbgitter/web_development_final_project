@@ -31,7 +31,7 @@
                             <input id="isActiveDepositorToggleBtn" type="checkbox" data-toggle="toggle">
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="Withdrawal.html">Widthraw<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="depositor-list.php">Widthraw<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">History <span class="fas fas-factory"></span></a>

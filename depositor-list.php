@@ -5,7 +5,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="includes/UserDetails.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,12 +14,13 @@
     <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
-    <script src="includes/scripts.js"></script>
+    <script src="includes/withdrawal.js"></script>
     <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+    <link rel="stylesheet" href="includes/stylesheet.css">
     <title>Papel</title>
 </head>
 <body>
-    <div id="wrapper2">
+    <div id="wrapper">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">Lavado De Papel</a>
@@ -54,11 +54,56 @@
                         </li>
                     </ul>
                 </div>
-            </nav>            
+            </nav>          
         </header>
-        <form action="depositor-approved-arrival.php" method="GET">
-            <input type="submit" name="Submit Form">
-        </form>        
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="text-center">Withdrawal</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="upperside">
+
+                        <form name="myForm" action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET" autocomplete="on">
+                            <label>Demanding sum: <input name="fullName"></label>
+                            <br><br>
+                            <br><br>
+                            <label>Up to deviation of: </label> <input type="number" name="tech" value="2" min="2" max="60" step="2" > 
+                            &nbsp &nbsp include interest: <input type="checkbox" name="hobbies" value="Reading Books"><br>
+                                <br><br>
+                                <br><br>
+                        </form>
+                    </ul>
+                </div>
+                <div class="row">
+                    <table id="contributesTable" class="table table-striped" onclick="location.href='depositor-details.php'">
+                        <thead>
+                          <tr>
+                            <th scope="col">Depositor</th>
+                            <th scope="col">Include interest</th>
+                            <th scope="col">Offering sum</th>
+                            <th scope="col">Distance (Meters)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                $id = $userDetails['Id'];
+                                $query = "SELECT * FROM tbl_users_225 WHERE Id != $id  AND IsDepositor = 1";
+                                $result = mysqli_query($connection, $query);
+                                while($row = mysqli_fetch_assoc($result)) {
+                                    echo "<tr><td>" .  $row["FullName"] . "</td>";
+                                    echo "<td>" . "REPLACE_ME" . "</td>";
+                                    echo "<td>" . "REPLACE_ME" . "</td>";
+                                    echo "<td>" . rand(50, 300) . "</td></tr>";
+                                }
+                            ?>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>

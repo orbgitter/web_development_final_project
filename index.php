@@ -34,7 +34,7 @@
                             <input id="isActiveDepositorToggleBtn" type="checkbox" data-toggle="toggle">
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="Withdrawal.html">Widthraw<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="depositor-list.php">Widthraw<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">History <span class="fas fas-factory"></span></a>
@@ -49,19 +49,10 @@
                         <li class="nav-item">
                                 <h2 class="sumOfCash" href="#">₪
                                     <?php
-                                        // $query = "SELECT * FROM tbl_users_225";
-                                        // $result = mysqli_query($connection, $query);
-
-                                        // while($row = mysqli_fetch_assoc($result)) {
-                                        //     echo $row['Amount'];
-                                        // }
+                                        echo substr($userDetails["FullName"], 0, strpos($userDetails["FullName"], ' '));
                                     ?>
                                 </h2>
                         </li>
-                        <li class="nav-item">
-                            <a id="userPic" href="#"></a>
-                        </li>
-                        </ul>
                     </ul>
                 </div>
             </nav>
@@ -78,7 +69,7 @@
                         <a class="btn btn-primary btn-block mainActionBtn" href="#">Depositor</a>
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <a class="btn btn-secondary btn-block mainActionBtn" href="Withdrawal.html">Puller</a>
+                        <a class="btn btn-secondary btn-block mainActionBtn" href="depositor-list.php">Puller</a>
                     </div> 
             </div>
     </main>

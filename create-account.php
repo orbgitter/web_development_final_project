@@ -3,11 +3,12 @@
 
     $isNewUser =  isset($_GET['newUser']);
     if(!$isNewUser) {
-        session_start();
-        $id = $_SESSION['id'];
-        $query = "SELECT * FROM tbl_users_225 WHERE Id = $id";
-        $result = mysqli_query($connection, $query);
-        $userDetails = mysqli_fetch_assoc($result);
+        include(getcwd() . '\includes\session.php');
+        // session_start();
+        // $id = $_SESSION['id'];
+        // $query = "SELECT * FROM tbl_users_225 WHERE Id = $id";
+        // $result = mysqli_query($connection, $query);
+        // $userDetails = mysqli_fetch_assoc($result);
         // $userDetails["FullName"] = 
     }
 ?>
@@ -42,7 +43,7 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="Withdrawal.html">Widthraw<span class="sr-only"></span></a>
+                            <a class="nav-link" href="depositor-list.php">Widthraw<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active">
                                 <a class="nav-link" href="#">Deposite<span class="sr-only"></span></a>
@@ -54,9 +55,17 @@
                             <!-- If user is registered - display Log Out button; Otherwise - Display Create Account-->
                             <a class="nav-link" href="#">Account<span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <?php
+                            if(!$isNewUser) {
+                                echo " <li class='nav-item'>";
+                                echo "<a class='nav-link' href='includes/logout.php'>Log Out</a>";
+                                echo "</li>";
+                            }
+
+                        ?>
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="includes/logout.php">Log Out</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>

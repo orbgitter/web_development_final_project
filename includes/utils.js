@@ -23,3 +23,9 @@ const findGetParameter =  function(parameterName) {
         });
     return result;
 }
+
+const getRandomInt = function(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
