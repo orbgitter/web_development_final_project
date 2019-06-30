@@ -1,5 +1,5 @@
 <?php
-     include(getcwd() . '\dbdonnect.php');
+     include(getcwd() . '\dbconnect.php');
 
     // Get the data from the form
     $un = $_POST["username"];

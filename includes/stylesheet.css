@@ -14,10 +14,6 @@ nav, aside, section,article, header,footer, main{
     display: block;
 }
 
-.isActiveDespositorToggle .toggle-on {
-    background: green !important;
-}
-
  body {
    margin: 0;
    padding: 0;
@@ -326,8 +322,9 @@ nav, aside, section,article, header,footer, main{
         margin-top:10%;
         height: 100%;
         border-radius: 1%;
-        font-size: 200%;
-    }
+        font-size: 100%;
+      }
+
 
     .confirmBtn {
         margin-top:10%;
@@ -339,7 +336,16 @@ nav, aside, section,article, header,footer, main{
 
  @media (min-width:591px) and (max-width:850px) {
     .mainActionBtn {
-        margin-top:5%;
+      margin-top:5%;
+      /* text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 800;
+    color: black;
+    border: 0;
+    width: 215px;
+    margin: 10px auto 0;
+    padding: 10px 40px;
+    border-radius: 20px; */
     }
 }
 

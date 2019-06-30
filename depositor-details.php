@@ -12,11 +12,9 @@
 
     <link rel="stylesheet" type="text/css" href="includes/3rd_parties/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
-    <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
     <script src="includes/scripts.js"></script>
-    <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
     <title>Papel</title>
 </head>
 <body>
@@ -30,9 +28,6 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item isActiveDespositorToggle">
-                            <input id="isActiveDepositorToggleBtn" type="checkbox" data-toggle="toggle">
-                        </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="depositor-list.php">Widthraw<span class="sr-only">(current)</span></a>
                         </li>
@@ -41,7 +36,7 @@
                         </li>
                         <li class="nav-item">
                             <!-- If user is registered - display Log Out button; Otherwise - Display Create Account-->
-                            <a class="nav-link" href="create-account.php">Account</a>
+                            <a class="nav-link" href="account-details.php">Account</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="includes/logout.php">Log Out</a>

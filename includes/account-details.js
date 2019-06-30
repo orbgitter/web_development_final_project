@@ -11,10 +11,11 @@ $("document").ready(function() {       //Main
 
     let isNewUser = findGetParameter("newUser") === "true";
     console.log(isNewUser);
-
+    console.log($("input[name=isDepositor]").val());
 
     $("button[type=submit]").click(function() {
         // console.log($("input[name=birthdate]").val());
+        console.log($("input[name=isDepositor]").val());
     })
 
 
@@ -56,10 +57,20 @@ $("document").ready(function() {       //Main
                 value: $("input[name=bankAccountNumber]").val()
             },
             {
+                name: 'isPuller',
+                value: $("input[name=isPuller]").is(":checked") ? 1 : 0
+            },
+            {
+                name: 'isDepositor',
+                value: $("input[name=isDepositor]").is(":checked") ? 1 : 0
+            },
+            {
                 name: 'newUser',
                 value: isNewUser
             }
         ]);
+    
+        // console.log(dataString);
 
         $.ajax({
             type: "POST",

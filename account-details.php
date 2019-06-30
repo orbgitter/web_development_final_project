@@ -1,5 +1,5 @@
 <?php
-    include(getcwd() . '\dbdonnect.php');
+    include(getcwd() . '\dbconnect.php');
 
     $isNewUser =  isset($_GET['newUser']);
     if(!$isNewUser) {
@@ -22,13 +22,12 @@
     <link rel="stylesheet" type="text/css" href="includes/3rd_parties/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="includes/3rd_parties/datepicker-bootstrap/css/datepicker.css">
-    <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
     <script src="includes/3rd_parties/datepicker-bootstrap/js/bootstrap-datepicker.js"></script>
     <script src="includes/utils.js"></script>
-    <script src="includes/create-account.js"></script>
+    <script src="includes/account-details.js"></script>
     <title>Lavado De Papel - Create Account</title>
 </head>
 <body id="">
@@ -61,11 +60,7 @@
                                 echo "<a class='nav-link' href='includes/logout.php'>Log Out</a>";
                                 echo "</li>";
                             }
-
                         ?>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="includes/logout.php">Log Out</a>
-                        </li> -->
                     </ul>
                 </div>
             </nav>
@@ -137,6 +132,17 @@
                             <label for="amount" class="col-sm-2 col-form-label">Amount</label>
                             <div class="col-sm-6">
                                 <input required type="text" class="form-control" name="amount" id="amount" placeholder="Amount of money in the account"  value='<?php echo isset($userDetails["Amount"]) ? $userDetails["Amount"] : null ?>'>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="actions" class="col-sm-2 col-form-label">Actions</label>
+                            <div class="col-sm-8 row">
+                                <div class="col-sm-2">
+                                    <label>Puller<input class="form-control" type="checkbox" name="isPuller" id="isPuller" <?php echo isset($userDetails["IsPuller"]) && $userDetails["IsPuller"] == "1" ? 'checked' : '' ?>></label>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label>Depositor<input class="form-control" type="checkbox" name="isDepositor" id="isDepositor"  <?php echo isset($userDetails["IsDepositor"]) && $userDetails["IsDepositor"] == "1" ? 'checked' : '' ?>></label>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group row">

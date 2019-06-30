@@ -10,13 +10,15 @@ let createHashCode = function(length) {
  
 $("document").ready(function() {       //Main
 
-    let depositorToggleBtn = $("#isActiveDepositorToggleBtn");
+    // let depositorToggleBtn = $("#isActiveDepositorToggleBtn");
 
-    depositorToggleBtn.bootstrapToggle();
-    depositorToggleBtn.change(function() {
-        console.log(depositorToggleBtn.prop('checked'));    
-    });
+    // depositorToggleBtn.bootstrapToggle();
+    // depositorToggleBtn.change(function() {
+    //     console.log(depositorToggleBtn.prop('checked'));    
+    // });
 
+
+    
     $("#generatorHashcodeBtn").click(function() {
         let generatedHashcode = createHashCode(11);
         console.log(generatedHashcode);

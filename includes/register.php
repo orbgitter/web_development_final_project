@@ -1,5 +1,5 @@
 <?php
-     include('..\dbdonnect.php');
+     include('..\dbconnect.php');
 
     $isNewUser = $_POST['newUser'] === 'true';
 
@@ -8,8 +8,8 @@
     $password = $_POST["password"];
     $userName = $_POST["userName"];
     $userId = $_POST["userId"];
-    $isDepositor = true;
-    $isPuller = true;
+    $isDepositor = (int) $_POST["isDepositor"];
+    $isPuller = (int) $_POST["isPuller"];
     $amount = (int) $_POST["amount"];
     $bankName = $_POST["bankName"];
     $branchNumber = (int) $_POST["branchNumber"];
