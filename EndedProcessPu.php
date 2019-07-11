@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    
     <link rel="stylesheet" type="text/css" href="includes/3rd_parties/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
     <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
     <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+
     <title>Papel</title>
 </head>
 <body>
     <div id="wrapper">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Lavado De Papel</a>
+                <a class="navbar-brand" href="index.php">Lavado De Papel</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,6 +28,9 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="depositor-list.php">Widthraw<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="puller-list.php">Depositing<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">History <span class="fas fas-factory"></span></a>
@@ -39,7 +43,7 @@
                             <a class="nav-link" href="includes/logout.php">Log Out</a>
                         </li>
                         <li class="nav-item">
-                            <h2 class="sumOfCash" href="#">₪
+                        <h2 class="sumOfCash" href="#">₪
                                 <?php
                                     echo $userDetails["Amount"];
                                     echo substr($userDetails["FullName"], 0, strpos($userDetails["FullName"], ' '));
@@ -52,9 +56,28 @@
         </header>
        <main>
            <div class="QrScanner">
-               <h4>QR Generator</h4>
+               <h4>QR Scanner</h4>
                <a id="QR" href="#"></a>
+               <div class='box'>
+                   <p>the process finish. want to rank the donor? </p>
+                   <div class="buttons">
+                        <button type="button" class="btn btn-danger" href="index.html">not now</button>
+                        <button type="button" class="btn btn-success" href="#">yes please</button>
+                   </div>
+               </div>
            </div>
+
+           <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <a class="btn btn-primary btn-block btn-danger mainActionBtn" href="#">cancel</a>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <a class="btn btn-secondary btn-block btn-success mainActionBtn" href="#">Scan the QR to accept you got the money</a>
+                    </div>
+                </div> 
+            </div>
+       
        </main>
     </div>
 </body>

@@ -18,7 +18,7 @@
     <div id="wrapper">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Lavado De Papel</a>
+                <a class="navbar-brand" href="index.php">Lavado De Papel</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,6 +27,9 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="depositor-list.php">Widthraw<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="puller-list.php">Depositing<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">History <span class="fas fas-factory"></span></a>
@@ -40,9 +43,6 @@
                         </li>
                         <li class="nav-item">
                             <h2 class="sumOfCash" href="#">₪<p value=<?php echo isset($userDetails["Amount"]) ? $userDetails["Amount"] : null ?>></p></h2>
-                        </li>
-                        <li class="nav-item">
-                            <a id="userPic" href="#"></a>
                         </li>
                     </ul>
                 </div>

@@ -30,10 +30,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="depositor-list.php">Widthraw<span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="puller-list.php">Depositing<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
@@ -47,7 +47,7 @@
                             <a class="nav-link" href="includes/logout.php">Log Out</a>
                         </li>
                         <li class="nav-item">
-                        <h2 class="sumOfCash" href="#">₪
+                            <h2 class="sumOfCash" href="#">₪
                                 <?php
                                     echo $userDetails["Amount"];
                                     echo substr($userDetails["FullName"], 0, strpos($userDetails["FullName"], ' '));
@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h3 class="text-center">Withdrawal</h3>
+                        <h3 class="text-center">Deposite</h3>
                     </div>
                 </div>
                 <div class="row">
@@ -70,6 +70,7 @@
 
                         <form name="myForm" action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET" autocomplete="on">
                             <label>Demanding sum: <input name="fullName"></label>
+                            <label>Demanding Precents of intrerests: <input name="fullName"></label>
                             <br><br>
                             <br><br>
                             <label>Up to deviation of: </label> <input type="number" name="tech" value="2" min="2" max="60" step="2" > 
@@ -84,8 +85,8 @@
                         <thead>
                           <tr>
                             <th scope="col">Depositor</th>
-                            <th scope="col">Include interest</th>
-                            <th scope="col">Offering sum</th>
+                            <th scope="col">ETA</th>  <!-- to give random reasonable values for ETA, in form HH:MM -->
+                            <th scope="col">Requested sum</th>
                             <th scope="col">Distance (Meters)</th>
                           </tr>
                         </thead>

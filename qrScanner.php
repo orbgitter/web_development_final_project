@@ -1,7 +1,3 @@
-<?php
-    include(getcwd() . '\includes\session.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="includes/3rd_parties/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
     <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
-    <script src="includes/withdrawal.js"></script>
     <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-    <link rel="stylesheet" href="includes/stylesheet.css">
     <title>Papel</title>
 </head>
 <body>
@@ -41,13 +37,13 @@
                         </li>
                         <li class="nav-item">
                             <!-- If user is registered - display Log Out button; Otherwise - Display Create Account-->
-                            <a class="nav-link" href="account-details.php">Account</a>
+                            <a class="nav-link" href="account-details.php">Create Account</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="includes/logout.php">Log Out</a>
                         </li>
                         <li class="nav-item">
-                        <h2 class="sumOfCash" href="#">₪
+                            <h2 class="sumOfCash" href="#">₪
                                 <?php
                                     echo $userDetails["Amount"];
                                     echo substr($userDetails["FullName"], 0, strpos($userDetails["FullName"], ' '));
@@ -56,56 +52,26 @@
                         </li>
                     </ul>
                 </div>
-            </nav>          
+            </nav>            
         </header>
-        <main>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <h3 class="text-center">Withdrawal</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <ul class="upperside">
+       <main>
+           <div class="QrScanner">
+               <h4>QR Scanner</h4>
+               <a id="QR" href="#"></a>
+           </div>
 
-                        <form name="myForm" action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET" autocomplete="on">
-                            <label>Demanding sum: <input name="fullName"></label>
-                            <br><br>
-                            <br><br>
-                            <label>Up to deviation of: </label> <input type="number" name="tech" value="2" min="2" max="60" step="2" > 
-                            &nbsp &nbsp include interest: <input type="checkbox" name="hobbies" value="Reading Books"><br>
-                                <br><br>
-                                <br><br>
-                        </form>
-                    </ul>
-                </div>
+           <div class="container">
                 <div class="row">
-                    <table id="contributesTable" class="table table-striped" onclick="location.href='depositor-details.php'">
-                        <thead>
-                          <tr>
-                            <th scope="col">Depositor</th>
-                            <th scope="col">Include interest</th>
-                            <th scope="col">Offering sum</th>
-                            <th scope="col">Distance (Meters)</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                $id = $userDetails['Id'];
-                                $query = "SELECT * FROM tbl_users_225 WHERE Id != $id  AND IsDepositor = 1";
-                                $result = mysqli_query($connection, $query);
-                                while($row = mysqli_fetch_assoc($result)) {
-                                    echo "<tr><td>" .  $row["FullName"] . "</td>";
-                                    echo "<td>" . "REPLACE_ME" . "</td>";
-                                    echo "<td>" . "REPLACE_ME" . "</td>";
-                                    echo "<td>" . rand(50, 300) . "</td></tr>";
-                                }
-                            ?>
-                        </tbody>
-                      </table>
-                </div>
+                    <div class="col-md-6 col-sm-12">
+                        <a class="btn btn-primary btn-block btn-danger mainActionBtn" href="#">cancel</a>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <a class="btn btn-secondary btn-block btn-success mainActionBtn" href="#">Scan the QR to accept you got the money</a>
+                    </div>
+                </div> 
             </div>
-        </main>
+       
+       </main>
     </div>
 </body>
 </html>

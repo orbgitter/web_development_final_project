@@ -23,15 +23,18 @@
     <div id="wrapper">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Lavado De Papel</a>
+                <a class="navbar-brand" href="index.php">Lavado De Papel</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="true" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="depositor-list.php">Widthraw<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="puller-list.php">Depositing<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">History <span class="fas fas-factory"></span></a>
@@ -64,7 +67,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
-                        <a class="btn btn-primary btn-block mainActionBtn" href="#">Depositor</a>
+                        <a class="btn btn-primary btn-block mainActionBtn" href="puller-list.php">Depositor</a>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <a class="btn btn-secondary btn-block mainActionBtn" href="depositor-list.php">Puller</a>

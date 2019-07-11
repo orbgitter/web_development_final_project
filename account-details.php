@@ -4,12 +4,6 @@
     $isNewUser =  isset($_GET['newUser']);
     if(!$isNewUser) {
         include(getcwd() . '\includes\session.php');
-        // session_start();
-        // $id = $_SESSION['id'];
-        // $query = "SELECT * FROM tbl_users_225 WHERE Id = $id";
-        // $result = mysqli_query($connection, $query);
-        // $userDetails = mysqli_fetch_assoc($result);
-        // $userDetails["FullName"] = 
     }
 ?>
 
@@ -34,23 +28,23 @@
     <div id="wrapper">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Lavado De Papel</a>
+                <a class="navbar-brand" href="index.php">Lavado De Papel</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="depositor-list.php">Widthraw<span class="sr-only"></span></a>
                         </li>
-                        <li class="nav-item active">
-                                <a class="nav-link" href="#">Deposite<span class="sr-only"></span></a>
-                            </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="puller-list.php">Deposite<span class="sr-only"></span></a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">History <span class="fas fas-factory"></span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <!-- If user is registered - display Log Out button; Otherwise - Display Create Account-->
                             <a class="nav-link" href="#">Account<span class="sr-only">(current)</span></a>
                         </li>

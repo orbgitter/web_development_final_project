@@ -1,24 +1,21 @@
-<?php
-    include(getcwd() . '\includes\session.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="includes/UserDetails.js"></script>
+    <link rel="stylesheet" href="includes/stylesheet.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" type="text/css" href="includes/3rd_parties/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
+    <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
-    <script src="includes/scripts.js"></script>
+    <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
     <title>Papel</title>
 </head>
 <body>
-    <div id="wrapper2">
+    <div id="wrapper">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="index.php">Lavado De Papel</a>
@@ -39,13 +36,13 @@
                         </li>
                         <li class="nav-item">
                             <!-- If user is registered - display Log Out button; Otherwise - Display Create Account-->
-                            <a class="nav-link" href="account-details.php">Account</a>
+                            <a class="nav-link" href="account-details.php">Create Account</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="includes/logout.php">Log Out</a>
                         </li>
                         <li class="nav-item">
-                        <h2 class="sumOfCash" href="#">₪
+                            <h2 class="sumOfCash" href="#">₪
                                 <?php
                                     echo $userDetails["Amount"];
                                     echo substr($userDetails["FullName"], 0, strpos($userDetails["FullName"], ' '));
@@ -56,9 +53,12 @@
                 </div>
             </nav>            
         </header>
-        <form action="depositor-approved-arrival.php" method="GET">
-            <input type="submit" name="Submit Form">
-        </form>        
+       <main>
+           <div class="QrScanner">
+               <h4>QR Generator</h4>
+               <a id="QR" href="#"></a>
+           </div>
+       </main>
     </div>
 </body>
 </html>
