@@ -1,5 +1,22 @@
 <?php
     include(getcwd() . '\includes\session.php');
+
+    if(isset($_GET["username"])) {
+        $username = $_GET["username"];
+        $query = "SELECT * FROM tbl_users_225 WHERE UserName = '$username' LIMIT 1";
+        $result = mysqli_query($connection, $query);
+        $deopositorDetails = mysqli_fetch_assoc($result);
+        
+        // Get the number of deposits
+        $depositorId = $deopositorDetails['Id'];
+        $queryCount = "SELECT COUNT(*) AS sum  FROM tbl_transactions_225 WHERE DepositorId = $depositorId";
+        $result = mysqli_query($connection, $queryCount);
+        $row = mysqli_fetch_assoc($result);
+        $numOfTransactions = $row['sum'];
+    }
+    else {
+        header("location: index.php");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +73,15 @@
                 </div>
             </nav>            
         </header>
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h3 class="text-center">Username: <?php echo $deopositorDetails["UserName"] . $numOfTransactions ?> </h3>
+                    </div>
+                </div>
+            </div>
+        </main>
         <form action="depositor-approved-arrival.php" method="GET">
             <input type="submit" name="Submit Form">
         </form>        

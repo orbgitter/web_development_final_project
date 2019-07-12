@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
-    <script src="includes/withdrawal.js"></script>
+    <script src="includes/Withdrawal.js"></script>
     <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
     <link rel="stylesheet" href="includes/stylesheet.css">
     <title>Papel</title>
@@ -81,7 +81,7 @@
                     </ul>
                 </div>
                 <div class="row">
-                    <table id="contributesTable" class="table table-striped" onclick="location.href='depositor-details.php'">
+                    <table id="contributesTable" class="table table-striped">
                         <thead>
                           <tr>
                             <th scope="col">Depositor</th>
@@ -93,12 +93,12 @@
                         <tbody>
                             <?php
                                 $id = $userDetails['Id'];
-                                $query = "SELECT * FROM tbl_users_225 WHERE Id != $id  AND IsDepositor = 1";
+                                $query = "SELECT * FROM tbl_users_225 WHERE Id != $id  AND IsPuller = 1";
                                 $result = mysqli_query($connection, $query);
                                 while($row = mysqli_fetch_assoc($result)) {
-                                    echo "<tr><td>" .  $row["FullName"] . "</td>";
+                                    echo "<tr onclick='onSelectedPuller(" . "\"" . $row["UserName"] . "\"" . ")'><td>" .  $row["FullName"] . "</td>";
                                     echo "<td>" . "REPLACE_ME" . "</td>";
-                                    echo "<td>" . "REPLACE_ME" . "</td>";
+                                    echo "<td>" . $row["AmountToWithdraw"] . "</td>";
                                     echo "<td>" . rand(50, 300) . "</td></tr>";
                                 }
                             ?>

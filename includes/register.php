@@ -10,6 +10,8 @@
     $userId = $_POST["userId"];
     $isDepositor = (int) $_POST["isDepositor"];
     $isPuller = (int) $_POST["isPuller"];
+    $amountToDeposit = (int) $_POST["amountToDeposit"];
+    $amountToWithdraw = (int) $_POST["amountToWithdraw"];
     $amount = (int) $_POST["amount"];
     $bankName = $_POST["bankName"];
     $branchNumber = (int) $_POST["branchNumber"];
@@ -29,14 +31,14 @@
         }
 
         else {
-            $query = "INSERT INTO tbl_users_225 (Id, FullName, Password, UserName, UserId, IsDepositor, IsPuller, Amount, BankName, BranchNumber, BankAccountNumber) VALUES (NULL, '$fullName','$password', '$userName','$userId', $isDepositor, $isPuller, $amount, '$bankName', $branchNumber, '$bankAccountNumber')";
+            $query = "INSERT INTO tbl_users_225 (Id, FullName, Password, UserName, UserId, IsDepositor, IsPuller, AmountToDeposit, AmountToWithdraw, Amount, BankName, BranchNumber, BankAccountNumber) VALUES (NULL, '$fullName','$password', '$userName','$userId', $isDepositor, $isPuller, $amountToDeposit, $amountToWithdraw, $amount, '$bankName', $branchNumber, '$bankAccountNumber')";
         }
     }
     else {
         session_start();
         if(isset($_SESSION['id'])) {
             $id = $_SESSION['id'];
-            $query = "UPDATE tbl_users_225 SET FullName = '$fullName', Password = '$password', IsDepositor = $isDepositor, IsPuller = $isPuller, Amount = $amount, BankName = '$bankName', BranchNumber = $branchNumber, BankAccountNumber = '$bankAccountNumber' WHERE Id = $id";
+            $query = "UPDATE tbl_users_225 SET FullName = '$fullName', Password = '$password', IsDepositor = $isDepositor, IsPuller = $isPuller, AmountToDeposit = $amountToDeposit, AmountToWithdraw = $amountToWithdraw, Amount = $amount, BankName = '$bankName', BranchNumber = $branchNumber, BankAccountNumber = '$bankAccountNumber' WHERE Id = $id";
         }
     }
     // "UPDATE tbl_221_tickets SET is_sold=1, bought_date='$bought_date', bought_by=$user_id WHERE id=$ticket_id";

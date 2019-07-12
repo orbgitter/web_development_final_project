@@ -140,6 +140,18 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="amountToDeposit" class="col-sm-2 col-form-label">Amount To Deposit</label>
+                            <div class="col-sm-6">
+                                <input required type="text" class="form-control" name="amountToDeposit" id="amountToDeposit" placeholder="Amount of money to deposit"  value='<?php echo isset($userDetails["AmountToDeposit"]) ? $userDetails["AmountToDeposit"] : null ?>'>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="amountToWithdraw" class="col-sm-2 col-form-label">Amount To Withdraw</label>
+                            <div class="col-sm-6">
+                                <input required type="text" class="form-control" name="amountToWithdraw" id="amountToWithdraw" placeholder="Amount of money to withdraw"  value='<?php echo isset($userDetails["AmountToWithdraw"]) ? $userDetails["AmountToWithdraw"] : null ?>'>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <div class="col-12 text-center">
                                     <div class="col-6 col-form-label">
                                     </div>

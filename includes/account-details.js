@@ -65,6 +65,14 @@ $("document").ready(function() {       //Main
                 value: $("input[name=isDepositor]").is(":checked") ? 1 : 0
             },
             {
+                name: 'amountToDeposit',
+                value: $("input[name=amountToDeposit]").val()
+            },
+            {
+                name: 'amountToWithdraw',
+                value: $("input[name=amountToWithdraw]").val()
+            },
+            {
                 name: 'newUser',
                 value: isNewUser
             }

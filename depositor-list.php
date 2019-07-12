@@ -97,7 +97,7 @@
                                 while($row = mysqli_fetch_assoc($result)) {
                                     echo "<tr><td>" .  $row["FullName"] . "</td>";
                                     echo "<td>" . "REPLACE_ME" . "</td>";
-                                    echo "<td>" . "REPLACE_ME" . "</td>";
+                                    echo "<td>" . $row["AmountToDeposit"] . "</td>";
                                     echo "<td>" . rand(50, 300) . "</td></tr>";
                                 }
                             ?>
