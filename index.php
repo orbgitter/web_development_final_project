@@ -15,6 +15,7 @@
 
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
+    <script src="includes/utils.js"></script>
     <script src="includes/scripts.js"></script>
     <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
     <title>Lavado De Papel</title>
@@ -74,5 +75,35 @@
                     </div> 
             </div>
     </main>
+
+    <script>
+        startRefreshTransactions(<?php echo $userDetails["Id"] ?>);
+    </script>
+
+    <!-- Button trigger modal -->
+    <button id="openTransactionModalBtn" type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#transactionModal"></button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="transactionModal" tabindex="-1" role="dialog" aria-labelledby="transactionModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="transactionModalLabel">New Transaction Request</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span id="transactionDetails"></span>
+                <input id="generatedCodeInput" class="form-control" type="text" placeholder="Insert The generated code">
+            </div>
+            <div class="modal-footer">
+                <button onclick="applyGeneratedCode()" id="applyGeneratedCodeBtn" type="button" class="btn btn-success">Save changes</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="dismissTransaction()">Decline</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -29,3 +29,17 @@ const getRandomInt = function(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+const getRandomTime = function() {
+    return `${getRandomInt(0, 23)}:${getRandomInt(0, 59)}`;
+}
+
+const createHashCode = function(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}

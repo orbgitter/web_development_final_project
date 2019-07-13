@@ -1,39 +1,132 @@
-let createHashCode = function(length) {
-    var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < length; i++ ) {
-       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+let selectedTransaction = null;
+
+const refreshTransactions = function(userId) {
+
+    // Get the user id
+    let dataString = `userId=${userId}`;
+
+        $.ajax({
+            type: "POST",
+            url: "includes/check-transactions.php",
+            data: dataString,
+            cache: true,
+            success: function(data) {
+                // console.log(data);
+                let openTransactions = JSON.parse(data);
+                console.log(openTransactions);
+
+                if(openTransactions.transactions && openTransactions.transactions.length > 0 &&  !($("#transactionModal").hasClass("show"))) {
+                    // openTransactions.transactions.forEach(function(element) { element. = "false"; });
+                    selectedTransaction = openTransactions.transactions[0];
+                   
+                    $("#transactionDetails").text(`The user ${selectedTransaction.UserName} . ETA is ${getRandomTime()}`);
+                    
+                    $("#openTransactionModalBtn").click();
+                }
+            },
+            error: function(event) {
+                // console.log(event);
+            }
+        }).done(function(event) {
+            // console.log(event);
+        });
+}
+
+const startRefreshTransactions = function(userId) {
+
+    const intervalTimeInSeconds = 30000;
+    refreshTransactions(userId);
+    let intervalId = setInterval( () => refreshTransactions(userId) , intervalTimeInSeconds);
+}
+
+const dismissTransaction = function() {
+
+    console.log("DISMISSING ...");
+    console.log(selectedTransaction);
+
+    if(selectedTransaction != null) {
+
+        let dataString = `transactionId=${selectedTransaction["TransactionId"]}`;
+
+        $.ajax({
+            type: "POST",
+            url: "includes/decline-transactions.php",
+            data: dataString,
+            cache: true,
+            success: function(data) {
+                // // console.log(data);
+                // let openTransactions = JSON.parse(data);
+                // console.log(openTransactions);
+
+                // if(openTransactions.transactions && openTransactions.transactions.length > 0 &&  !($("#transactionModal").hasClass("show"))) {
+                //     // openTransactions.transactions.forEach(function(element) { element. = "false"; });
+                //     let selectedTransaction = openTransactions.transactions[0];
+                
+                //     $("#transactionModal .modal-body").text(`The user ${selectedTransaction.UserName} . ETA is ${getRandomTime()}`);
+                    
+                //     $("#openTransactionModalBtn").click();
+                // }
+            },
+            error: function(event) {
+                // console.log(event);
+            }
+        }).done(function(event) {
+            // console.log(event);
+        });
     }
-    return result;
- }
- 
+}
+
+// const enableBtnCheck = function() {
+//     if( $("#textElement").val().length > 0) {
+
+//     }
+// }
+
+const applyGeneratedCode = function() {
+
+    let generatedCodeInput = $("#generatedCodeInput").val();
+
+    if(generatedCodeInput === selectedTransaction["GeneratedPassword"]) {
+        console.log("CORRECT !");
+
+            // Get the user id
+        let dataString = `transactionId=${selectedTransaction["TransactionId"]}`;
+
+        $.ajax({
+            type: "POST",
+            url: "includes/apply-transactions.php",
+            data: dataString,
+            cache: true,
+            success: function(data) {
+                // console.log(data);
+                // PUT SUCCESS MESSAGE AFTER TRANSACTION COMPLETED
+            },
+            error: function(event) {
+                // console.log(event);
+            }
+        }).done(function(event) {
+            // console.log(event);
+        });
+
+    }
+    else {
+        console.log("ERROR !"); // TODO
+    }
+}
+
 $("document").ready(function() {       //Main
 
-    // let depositorToggleBtn = $("#isActiveDepositorToggleBtn");
+    // let applyGeneratedCodeBtn = $("#applyGeneratedCodeBtn");
+    // let generatedCodeInput = $("#generatedCodeInput");
 
-    // depositorToggleBtn.bootstrapToggle();
-    // depositorToggleBtn.change(function() {
-    //     console.log(depositorToggleBtn.prop('checked'));    
+    // generatedCodeInput.keypress(function() {
+    //     if( applyGeneratedCodeBtn.is(":disabled") && generatedCodeInput.val().length > 0) {
+    //         applyGeneratedCodeBtn.removeAttr("disabled");
+    //     }
+    //     if(generatedCodeInput.val() == 0) {
+    //         applyGeneratedCodeBtn.attr("disabled", "disabled");
+    //     }
     // });
 
-
-    
-    $("#generatorHashcodeBtn").click(function() {
-        let generatedHashcode = createHashCode(11);
-        console.log(generatedHashcode);
-        $("#hashCodePlaceHolder").text(generatedHashcode);
-    });
-
-    $("#submitAccount").click(function() {
-
-    // let formObj = $("#createAccountForm");
-    // console.log(formObj);
-    // formObj.validate();
-    // if(formObj.valid()) {
-    //     console.log("FORM IS VALID");
-    // }
-    // else 
-    //     console.log("FORM IS NOT VALID");
-    });
 });

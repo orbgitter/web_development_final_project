@@ -641,3 +641,18 @@ input[type=button], input[type=submit], input[type=reset] {
 .historyA5 {
     margin-top: 0%;
 }
+
+.hidden {
+  display: none;
+}
+
+#successfullTransaction {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}

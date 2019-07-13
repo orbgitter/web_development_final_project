@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
+    <script src="includes/utils.js"></script>
+    <script src="includes/transactions.js"></script>
     <script src="includes/scripts.js"></script>
     <title>Papel</title>
 </head>
@@ -73,7 +75,7 @@
                 </div>
             </nav>            
         </header>
-        <main>
+        <main id="userDetails">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
@@ -81,10 +83,20 @@
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <button class="btn btn-primary" <?php echo "onclick='onStartTransaction(" . $userDetails["Id"] . "," . $deopositorDetails["Id"] . "," . $deopositorDetails["AmountToDeposit"] . "," . "\"" . $deopositorDetails["UserName"] . "\"" . ")'" ?>>Submit</button>
+                    </div>
+                </div>           
+            </div>
         </main>
-        <form action="depositor-approved-arrival.php" method="GET">
-            <input type="submit" name="Submit Form">
-        </form>        
+        <main id="successfullTransaction">
+            <div class="alert alert-success">
+                <strong>Success!</strong> <span id="successfullTransactionMsg"></span>
+            </div>
+        </main>
     </div>
 </body>
 </html>

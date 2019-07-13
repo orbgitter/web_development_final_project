@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.css"></script>
     <script src="includes/3rd_parties/jquery-3.4.1.min.js"></script>
     <script src="includes/3rd_parties/bootstrap.min.js"></script>
+    <script src="includes/utils.js"></script>
     <script src="includes/Withdrawal.js"></script>
     <script src="includes/3rd_parties/bootstrap-toggle/bootstrap-toggle.min.js"></script>
     <link rel="stylesheet" href="includes/stylesheet.css">
@@ -93,11 +94,11 @@
                         <tbody>
                             <?php
                                 $id = $userDetails['Id'];
-                                $query = "SELECT * FROM tbl_users_225 WHERE Id != $id  AND IsPuller = 1";
+                                $query = "SELECT * FROM tbl_users_225 WHERE Id != $id  AND IsPuller = 1 AND AmountToWithdraw > 0";
                                 $result = mysqli_query($connection, $query);
                                 while($row = mysqli_fetch_assoc($result)) {
                                     echo "<tr onclick='onSelectedPuller(" . "\"" . $row["UserName"] . "\"" . ")'><td>" .  $row["FullName"] . "</td>";
-                                    echo "<td>" . "REPLACE_ME" . "</td>";
+                                    echo "<td>" . rand(0,23) . ":" . rand(0,59) . "</td>";
                                     echo "<td>" . $row["AmountToWithdraw"] . "</td>";
                                     echo "<td>" . rand(50, 300) . "</td></tr>";
                                 }

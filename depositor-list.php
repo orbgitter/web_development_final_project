@@ -92,7 +92,7 @@
                         <tbody>
                             <?php
                                 $id = $userDetails['Id'];
-                                $query = "SELECT * FROM tbl_users_225 WHERE Id != $id  AND IsDepositor = 1";
+                                $query = "SELECT * FROM tbl_users_225 WHERE Id != $id  AND IsDepositor = 1  AND AmountToDeposit > 0";
                                 $result = mysqli_query($connection, $query);
                                 while($row = mysqli_fetch_assoc($result)) {
                                     echo "<tr><td>" .  $row["FullName"] . "</td>";

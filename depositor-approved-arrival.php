@@ -59,7 +59,7 @@
                     <div class="form-group row">
                         <div class="col-sm-12">
                             <label for="phpEcho" class="col-sm-12 col-form-label">
-                                <?php echo "Dear user, your request has successfully accepted";?>
+                                <?php echo "Dear user, your request has successfully accepted by";?>
                             </label>             
                         </div>
                     </div>

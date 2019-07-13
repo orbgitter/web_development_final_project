@@ -4,7 +4,6 @@ $("document").ready(function() {       //Main
     let errorCredtialsMsg = $("#incorrectCredentials");
 
     $("#loginForm").submit(function(event) {
-        console.log("BLA");
 
         let dataString = generateDataString([
             {
