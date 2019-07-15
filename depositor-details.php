@@ -75,19 +75,58 @@
                 </div>
             </nav>            
         </header>
+
         <main id="userDetails">
-            <div class="container">
-                <div class="row">
+            <div class="userDetailsUp">
+                <div class="userDetailsUserName">
                     <div class="col-12 text-center">
-                        <h3 class="text-center">Username: <?php echo $deopositorDetails["UserName"] . $numOfTransactions ?> </h3>
+                        <h3 class="text-center"><?php echo $deopositorDetails["UserName"] ?> </h3>
                     </div>
                 </div>
+                <a id="userDetailsHeadline"></a>
+                <ul class="userDetailsList" >
+                    <li class="userDetailsList"><a style="margin-left=10%;">num of deposits: </a><?php echo $numOfTransactions ?></li>
+                    <li class="userDetailsList"><a style="margin-left=10%;">num of withdraw: 10</a></li>
+                    <li class="userDetailsList"><a style="margin-left=10%;">Arrival speed: fast</a></li>
+                    <li class="userDetailsList">
+                        <a class="userDetailsRank" style="float: right"></a>
+                        <a style="margin-left=10%;">application's grade: </a>
+                    </li>
+                    <li class="userDetailsList">
+                        <a class="userDetailsRank" style="float: right"></a>
+                        <a style="margin-left=10%;">users's grade: </a>
+                    </li> 
+                    <li class="userDetailsList"><a style="margin-left=10%;">users said: </a></li>
+                </ul>
+            </div>
+
+            
+            
+            <div class="userDetailsDown">
+                <li class="userDetailsList2" style="background-color: #CF868B">
+                    <a class="userDetailsFace"></a>
+                    <a class="userDetailsA1">01/01/2001</a>
+                    <a class="userDetailsA2" style="float: right;"></a>
+                    <p class="userDetailsParagraphDiv">very nice</p>
+                </li>
+                <li class="userDetailsList2">
+                    <a class="userDetailsFace"></a>
+                    <a class="userDetailsA1">01/01/2001</a>
+                    <a class="userDetailsA2" style="float: right;"></a>
+                    <p class="userDetailsParagraphDiv">very nice</p>
+                </li>
+                <li class="userDetailsList2" style="background-color: #CF868B">
+                    <a class="userDetailsFace"></a>
+                    <a class="userDetailsA1">01/01/2001</a>
+                    <a class="userDetailsA2" style="float: right;"></a>
+                    <p class="userDetailsParagraphDiv">very nice</p>
+                </li>
             </div>
 
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <button class="btn btn-primary" <?php echo "onclick='onStartTransaction(" . $userDetails["Id"] . "," . $deopositorDetails["Id"] . "," . $deopositorDetails["AmountToDeposit"] . "," . "\"" . $deopositorDetails["UserName"] . "\"" . ")'" ?>>Submit</button>
+                        <button class="btn btn-primary btn-block mainActionBtn text-center" <?php echo "onclick='onStartTransaction(" . $userDetails["Id"] . "," . $deopositorDetails["Id"] . "," . $deopositorDetails["AmountToDeposit"] . "," . "\"" . $deopositorDetails["UserName"] . "\"" . ")'" ?>>Submit</button>
                     </div>
                 </div>           
             </div>
