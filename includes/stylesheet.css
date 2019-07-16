@@ -337,15 +337,6 @@ nav, aside, section,article, header,footer, main{
  @media (min-width:591px) and (max-width:850px) {
     .mainActionBtn {
       margin-top:5%;
-      /* text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 800;
-    color: black;
-    border: 0;
-    width: 215px;
-    margin: 10px auto 0;
-    padding: 10px 40px;
-    border-radius: 20px; */
     }
 }
 
@@ -356,7 +347,7 @@ nav, aside, section,article, header,footer, main{
     }
 }
     
-/*----------------------ERAN----------------------*/
+/*--------------------------------------------*/
 
 * {
     margin: 0px auto;
@@ -417,10 +408,6 @@ input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
   }
 
-  /*----------------------stil eran-------------------*/
-
-
-
 
   #contributesTable > thead tr {
     background: #B33D45;
@@ -451,8 +438,6 @@ input[type=button], input[type=submit], input[type=reset] {
     margin-left: 10%;
     margin-top: 2%;
 }
-
-
 
 
 /*----QrScanner-----*/
@@ -490,14 +475,12 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 
-
 /*--------userDetailsPage--------*/
 
 
 .userDetailsUp {
     margin-top: 10%;
-    width: 20%;
-
+    width: 80%;
 }
 
 .userDetailsUserName {
@@ -508,7 +491,7 @@ input[type=button], input[type=submit], input[type=reset] {
     margin-top: 5%;
 }
 
-.userDetailsHeadline {
+#userDetailsHeadline {
     width: 100px;
     height: 100px;
     background: url("../images/avigabai.jpg")no-repeat top right;
@@ -519,7 +502,7 @@ input[type=button], input[type=submit], input[type=reset] {
 
 .userDetailsList {
     margin-top: 10%;
-    margin-left: 2%;
+    margin-left: 0%;
     list-style-type: none;
     font-size: 21px;
     line-height: 300%;
@@ -529,18 +512,22 @@ input[type=button], input[type=submit], input[type=reset] {
 .userDetailsRank {
     width: 100px;
     height: 100px;
-    background: url("../images/3stars.png")no-repeat top right;
-    margin-right: 40%;
+    background: url("../images/3stars.png")no-repeat top right;    
+    margin-right: 10%;
 }
 
-.userDetailsDown { margin: 0%; }
+#userDetailsDown { 
+  margin: 0%;
+}
 
 .userDetailsList2 {
     list-style-type: none;
     font-size: 21px;
     line-height: 300%;
     width: 80%;
+    background-color: #CF868B;
 }
+
 
 .userDetailsFace {
     width: 70px;
@@ -554,22 +541,19 @@ input[type=button], input[type=submit], input[type=reset] {
     margin-top: 0%;
 }
 
-.userDetailsA2 {
+#userDetailsA2 {
     width: 100px;
     height: 100px;
     background: url("../images/3stars.png")no-repeat top right;
     margin-right: 40%;
     margin-top: -1%;
+    float: right;
 }
 
 .userDetailsParagraphDiv {
     margin: 0%;
     margin-left: 1%;
     font-size: 15px;
-}
-
-#userDetailsList2:nth-child(even) {
-    background-color: #CF868B;
 }
 
 
