@@ -85,37 +85,37 @@
                 </div>
                 <a id="userDetailsHeadline"></a>
                 <ul class="userDetailsList" >
-                    <li class="userDetailsList"><a style="margin-left=10%;">num of deposits: </a><?php echo $numOfTransactions ?></li>
-                    <li class="userDetailsList"><a style="margin-left=10%;">num of withdraw: 10</a></li>
-                    <li class="userDetailsList"><a style="margin-left=10%;">Arrival speed: fast</a></li>
+                    <li class="userDetailsList">num of deposits: </a><?php echo $numOfTransactions ?></li>
+                    <li class="userDetailsList">num of withdraw: 10</a></li>
+                    <li class="userDetailsList">Arrival speed: fast</a></li>
                     <li class="userDetailsList">
                         <a class="userDetailsRank" style="float: right"></a>
-                        <a style="margin-left=10%;">application's grade: </a>
+                        <a>application's grade: </a>
                     </li>
                     <li class="userDetailsList">
                         <a class="userDetailsRank" style="float: right"></a>
-                        <a style="margin-left=10%;">users's grade: </a>
+                        <a>users's grade: </a>
                     </li> 
-                    <li class="userDetailsList"><a style="margin-left=10%;">users said: </a></li>
+                    <li class="userDetailsList"><a>users said: </a></li>
                 </ul>
             </div>
 
             
             
             <div class="userDetailsDown">
-                <li class="userDetailsList2" style="background-color: #CF868B">
-                    <a class="userDetailsFace"></a>
-                    <a class="userDetailsA1">01/01/2001</a>
-                    <a class="userDetailsA2" style="float: right;"></a>
-                    <p class="userDetailsParagraphDiv">very nice</p>
-                </li>
                 <li class="userDetailsList2">
                     <a class="userDetailsFace"></a>
                     <a class="userDetailsA1">01/01/2001</a>
                     <a class="userDetailsA2" style="float: right;"></a>
                     <p class="userDetailsParagraphDiv">very nice</p>
                 </li>
-                <li class="userDetailsList2" style="background-color: #CF868B">
+                <li class="userDetailsList2" style="background-color: #FFFFFF">
+                    <a class="userDetailsFace"></a>
+                    <a class="userDetailsA1">01/01/2001</a>
+                    <a class="userDetailsA2" style="float: right;"></a>
+                    <p class="userDetailsParagraphDiv">very nice</p>
+                </li>
+                <li class="userDetailsList2">
                     <a class="userDetailsFace"></a>
                     <a class="userDetailsA1">01/01/2001</a>
                     <a class="userDetailsA2" style="float: right;"></a>
